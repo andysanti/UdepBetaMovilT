@@ -13,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Register and Sign in"
+        android:visibility="invisible"
         android:textAllCaps="true"
         android:textStyle="bold"
         android:textSize="18sp"
@@ -20,43 +21,43 @@
         android:layout_gravity="center_horizontal"/>
 
     <EditText
+        android:id="@+id/idtxtUsuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:padding="16dp"
-        android:ems="1"
-        android:inputType="textEmailAddress"
-        android:hint="UserName"
         android:background="#6ef4f4f4"
-        android:drawablePadding="78dp"
-        android:textColorHint="#fff"
         android:drawableLeft="@drawable/ic_person_white_24dp"
-        />
+        android:drawablePadding="78dp"
+        android:ems="1"
+        android:hint="@string/usuario"
+        android:inputType="number"
+        android:padding="16dp"
+        android:textColorHint="#fff" />
 
     <EditText
+        android:id="@+id/idtxtPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:padding="16dp"
-        android:ems="1"
-        android:inputType="textPassword"
-        android:hint="......"
-        android:textColorHint="#fff"
         android:background="#6ef4f4f4"
-        android:drawablePadding="78dp"
         android:drawableLeft="@drawable/ic_lock_white_24dp"
-        />
+        android:drawablePadding="78dp"
+        android:ems="1"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:textColorHint="#fff" />
 
     <Button
+        android:id="@+id/idbtnIngresar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Login in"
-        android:textAllCaps="true"
-        android:textColor="#fff"
+        android:layout_marginTop="16dp"
         android:background="@drawable/background_login_two"
         android:paddingLeft="48dp"
         android:paddingRight="48dp"
-        android:layout_marginTop="16dp"
-        />
+        android:text="@string/iniciar_sesion"
+        android:textAllCaps="true"
+        android:textColor="#fff" />
 </LinearLayout>

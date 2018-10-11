@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Udep Movil</string>
+
+    <!-- Login. -->
+    <string name="usuario">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+
+    <!-- Aula Virtual. -->
+    <string name="aula_virtual">Aula Virtual</string>
+    <string name="mi_horario">Mi Horario</string>
+    <string name="asistencias">Asistencias</string>
+    <string name="ficha_matricula">Ficha Matricula</string>
+    <string name="estado_cuenta">Estado Cuenta</string>
+    <string name="reporte_notas">Reporte Notas</string>
+    <string name="mis_cursos">Mis Cursos</string>
+    <string name="sílabos">Sílabos</string>
+
+    <string name="no_notificaciones">No tiene notificaciones</string>
 </resources>

@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".AulaVirtualActivity" />
+        <activity android:name=".NotificacionesActivity" />
+        <activity android:name=".EstadoCuentaActivity"></activity>
     </application>
 
 </manifest>
