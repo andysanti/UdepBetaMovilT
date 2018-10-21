@@ -13,17 +13,17 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/descripcion_cuenta"
+            android:id="@+id/idtxtdescripcion_cuenta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:text="CONVALID EXTERNA" />
 
         <TextView
-            android:id="@+id/fecha_cuenta"
+            android:id="@+id/idtxtfecha_cuenta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/descripcion_cuenta"
+            android:layout_below="@id/idtxtdescripcion_cuenta"
             android:layout_marginRight="25dp"
             android:text="201710 | 10 FEB 2017" />
 
@@ -38,7 +38,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/monto_cuenta"
+            android:id="@+id/idtxtmonto_cuenta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"

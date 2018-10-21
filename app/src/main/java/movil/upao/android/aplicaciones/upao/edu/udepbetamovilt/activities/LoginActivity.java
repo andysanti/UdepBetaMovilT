@@ -1,4 +1,4 @@
-package movil.upao.android.aplicaciones.upao.edu.udepbetamovilt;
+package movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.R;
 
 public class LoginActivity extends AppCompatActivity {
 
