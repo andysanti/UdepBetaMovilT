@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.R;
 
@@ -27,12 +28,22 @@ public class LoginActivity extends AppCompatActivity {
         txtPassword = findViewById(R.id.idtxtPassword);
         btnIngresar = findViewById(R.id.idbtnIngresar);
 
-        btnIngresar.setOnClickListener(new View.OnClickListener() {
+        /*btnIngresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 abre_dialogo_error(view);
             }
-        });
+        });*/
+    }
+    public void pantallaAula(View view) {
+        if( txtPassword.getText().toString().equals("Sullana") ){
+            Intent intent = new Intent(this, AulaVirtualActivity.class);
+            startActivity(intent);
+            //prefs.putString(DeliverySharedPreferences.PREF_USUARIO, txtUsuario.getText().toString());
+        }else{
+            abre_dialogo_error(view);
+        }
+
     }
 
     public void abre_dialogo_error(View v) {
