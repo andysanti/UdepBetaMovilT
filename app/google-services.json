@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "808184459277",
+    "firebase_url": "https://udepbetamovil-2018.firebaseio.com",
+    "project_id": "udepbetamovil-2018",
+    "storage_bucket": "udepbetamovil-2018.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:808184459277:android:b3713a9feb292c1a",
+        "android_client_info": {
+          "package_name": "movil.upao.android.aplicaciones.upao.edu.udepbetamovilt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "808184459277-grvt9gdpn2jn1l2b6p6k6emtgq6ov62p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "movil.upao.android.aplicaciones.upao.edu.udepbetamovilt",
+            "certificate_hash": "b974f178ea8affa25c15e62d38890a1e202bf256"
+          }
+        },
+        {
+          "client_id": "808184459277-2ltusn06a65c5cvsdg8rj4cf33ud0sfr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlV2rA4w_HQS07mTj-PfSgLQWn683SDkw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "808184459277-2ltusn06a65c5cvsdg8rj4cf33ud0sfr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

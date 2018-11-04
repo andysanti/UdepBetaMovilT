@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView
+        android:id="@+id/iconNotif"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/ic_user" />
+
+    <TextView
+        android:id="@+id/txtTituloNotif"
+        android:textStyle="bold"
+        android:text="Notas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iconNotif"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/txtDescripcionNotif"
+        android:text="El profesor ha actualizado una nueva nota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTituloNotif"
+        android:layout_toRightOf="@+id/iconNotif"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="14dp"/>
+</RelativeLayout>

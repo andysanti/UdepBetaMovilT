@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/opt_todos"
+        android:icon="@drawable/ic_filter"
+        android:title="Todos"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/opt_profesor"
+        android:title="Profesores" />
+    <item
+        android:id="@+id/opt_avisos"
+        android:title="Avisos" />
+    <item
+        android:id="@+id/opt_otros"
+        android:title="Otros" />
+</menu>
