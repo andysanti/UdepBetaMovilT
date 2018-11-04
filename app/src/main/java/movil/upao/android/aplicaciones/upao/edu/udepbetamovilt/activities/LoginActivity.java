@@ -12,18 +12,20 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.R;
+import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.utils.UdepSharedPreferences;
 
 public class LoginActivity extends AppCompatActivity {
 
     private EditText txtUsuario;
     private EditText txtPassword;
     private Button btnIngresar;
+    private UdepSharedPreferences prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        prefs = new UdepSharedPreferences(this);
         txtUsuario = findViewById(R.id.idtxtUsuario);
         txtPassword = findViewById(R.id.idtxtPassword);
         btnIngresar = findViewById(R.id.idbtnIngresar);
@@ -35,11 +37,23 @@ public class LoginActivity extends AppCompatActivity {
             }
         });*/
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // si el usuario ya está logueado para que mostrarle el login? lo redirigmos al main activity.
+        String usuario = prefs.getString(UdepSharedPreferences.PREF_USUARIO, null);
+        if (usuario != null) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
+    }
     public void pantallaAula(View view) {
         if( txtPassword.getText().toString().equals("Sullana") ){
-            Intent intent = new Intent(this, AulaVirtualActivity.class);
+            Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
-            //prefs.putString(DeliverySharedPreferences.PREF_USUARIO, txtUsuario.getText().toString());
+            prefs.putString(UdepSharedPreferences.PREF_USUARIO, txtUsuario.getText().toString());
+            this.finish();
         }else{
             abre_dialogo_error(view);
         }
