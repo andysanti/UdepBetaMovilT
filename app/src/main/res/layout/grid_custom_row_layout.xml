@@ -1,22 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="150dp"
     android:background="@android:color/darker_gray"
     android:gravity="center_vertical">
 
     <TextView
-        android:id="@+id/label"
+        android:id="@+id/gcrl_curso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center_vertical"
-        android:padding="10dp"
+        android:padding="7dp"
         android:textColor="@android:color/black"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        android:text="SISTEMA DE SOPORTE DE DECISON" />
+    <!--
+    <TextView
+        android:id="@+id/label2"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:gravity="bottom"
+        android:padding="1dp"
+        android:text="Creditos: 3"
+        android:layout_marginBottom="7dp"
+        android:textColor="@android:color/black"
+        android:textSize="10sp" />
+    -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="start"
+        android:gravity="start"
+        android:layout_margin="7dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:text="Ciclo : " />
+
+        <TextView android:id="@+id/gcrl_ciclo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="08" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="end"
+        android:gravity="bottom"
+        android:layout_margin="7dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:text="Créditos : " />
+
+        <TextView android:id="@+id/gcrl_creditos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="4" />
+    </LinearLayout>
 
     <CheckBox
-        android:id="@+id/checkbox"
+        android:id="@+id/gcrl_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right" />
