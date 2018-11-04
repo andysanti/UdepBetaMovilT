@@ -1,5 +1,9 @@
 package movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.Models;
 
+/**
+ * Created by Victor Ramirez Pc on 10/29/18.
+ */
+
 public class Cuenta {
     private int id;
     private String descripcion;

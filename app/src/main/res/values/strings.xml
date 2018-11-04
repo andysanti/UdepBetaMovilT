@@ -16,5 +16,11 @@
     <string name="mis_cursos">Mis Cursos</string>
     <string name="sílabos">Sílabos</string>
 
+    <string name="notificaciones">Notificaciones</string>
+    <string name="registro_matricula">Matricula</string>
+
     <string name="no_notificaciones">No tiene notificaciones</string>
+
+    <string name="delete">Delete</string>
+    <string name="show">Show</string>
 </resources>
