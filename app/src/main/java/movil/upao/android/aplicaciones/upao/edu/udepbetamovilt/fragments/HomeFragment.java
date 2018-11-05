@@ -33,7 +33,7 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_home, container, false);
-       // showToolbar(getResources().getString(R.string.tab_home), false, view);
+        showToolbar(getResources().getString(R.string.tab_home), false, view);
 
 
         return view;
