@@ -59,8 +59,8 @@ public class GridListAdapter extends BaseAdapter {
             //else
                 view = inflater.inflate(R.layout.grid_custom_row_layout, viewGroup, false);
 
-            viewHolder.label = (TextView) view.findViewById(R.id.label);
-            viewHolder.checkBox = (CheckBox) view.findViewById(R.id.checkbox);
+            viewHolder.label = (TextView) view.findViewById(R.id.gcrl_curso);
+            viewHolder.checkBox = (CheckBox) view.findViewById(R.id.gcrl_checkbox);
 
             view.setTag(viewHolder);
         } else
