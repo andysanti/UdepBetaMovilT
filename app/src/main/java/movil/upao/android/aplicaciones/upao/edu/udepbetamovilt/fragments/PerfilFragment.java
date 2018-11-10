@@ -22,7 +22,8 @@ public class PerfilFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 
-    private TextView txtNombre;
+    private TextView txtNombrePerfil;
+    private TextView txtNombrePerfilToolBar;
     public PerfilFragment() {
         // Required empty public constructor
     }
@@ -41,8 +42,10 @@ public class PerfilFragment extends Fragment {
        // showToolbar("",false,view);
         String imageUrl = "https://sigadocentes.udep.edu.pe/fotossiga/persona/1016398_a866d43.jpg";
         String nombre="Andy Santi";
-        //txtNombre = (TextView)view.findViewById(R.id.txtNombre);
-        //txtNombre.setText(nombre);
+        txtNombrePerfil = (TextView)view.findViewById(R.id.txtNombrePerfil);
+        txtNombrePerfilToolBar = (TextView)view.findViewById(R.id.txtNombrePerfilToolBar);
+        txtNombrePerfil.setText(nombre);
+        txtNombrePerfilToolBar.setText(nombre);
         CircleImageView imageView = (CircleImageView) view.findViewById(R.id.imagenperfil);
         Context c = getActivity().getApplicationContext();
         Picasso.with(c).load(imageUrl)
