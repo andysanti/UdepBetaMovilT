@@ -14,12 +14,14 @@ public class Persona {
     }
 
     public Persona(int id, String DNI, String nombre, String apellidos) {
+        this.id = id;
         this.DNI = DNI;
         this.nombre = nombre;
         this.apellidos = apellidos;
     }
 
     public Persona(int id, String DNI, String nombre, String apellidos, String direccion, String telefono, String email, String genero) {
+        this.id = id;
         this.DNI = DNI;
         this.nombre = nombre;
         this.apellidos = apellidos;

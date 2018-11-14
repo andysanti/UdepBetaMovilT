@@ -3,14 +3,12 @@ package movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
-import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -18,20 +16,14 @@ import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseListAdapter;
 import com.firebase.ui.database.FirebaseListOptions;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.HashMap;
 
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.Models.Notificacion;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.R;
 import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
 
 public class NotificacionesActivity extends AppCompatActivity {
 
@@ -132,10 +124,9 @@ public class NotificacionesActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
+        inflater.inflate(R.menu.menu_notificacion, menu);
         return true;
     }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

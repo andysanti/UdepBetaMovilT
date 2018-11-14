@@ -12,7 +12,9 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.Models.Curso;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.R;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.adapters.GridListAdapter;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.daos.DAOSQLCurso;
@@ -53,11 +55,11 @@ public class GridViewFragment extends Fragment {
 
     private void loadCursoGridView(View view) {
         GridView gridView = (GridView) view.findViewById(R.id.grid_view);
-        arrayList = new ArrayList<>();
-        for(int i = 0; i < dao_Curso.all().size(); i++)
-            arrayList.add(dao_Curso.all().get(i).getNombre());
+        //arrayList = new ArrayList<>();
+        //for(int i = 0; i < dao_Curso.all().size(); i++)
+            //arrayList.add(dao_Curso.all().get(i).getNombre());
 
-        adapter = new GridListAdapter(context, arrayList, false);
+        adapter = new GridListAdapter(context, dao_Curso.all());
         gridView.setAdapter(adapter);
     }
 
@@ -69,6 +71,44 @@ public class GridViewFragment extends Fragment {
 
         adapter = new GridListAdapter(context, arrayList, false);
         gridView.setAdapter(adapter);
+    }
+
+    public List<Curso> show_ones(){
+        SparseBooleanArray selectedRows = adapter.getSelectedIds();
+        List<Curso> cursos_selected = new ArrayList<>();
+        if (selectedRows.size() > 0) {
+            StringBuilder stringBuilder = new StringBuilder();
+            for (int i = 0; i < selectedRows.size(); i++) {
+                if (selectedRows.valueAt(i)) {
+                    Curso c =  dao_Curso.all().get(selectedRows.keyAt(i));
+                    cursos_selected.add(c);
+                }
+            }
+        }
+        return cursos_selected;
+    }
+
+    public void deselect_all(){
+        adapter.removeSelection();
+    }
+
+    public void select_button(){
+        //Check the current text of Select Button
+        //if (selectButton.getText().toString().equals(getResources().getString(R.string.select_all))) {
+
+            //If Text is Select All then loop to all array List items and check all of them
+            for (int i = 0; i < arrayList.size(); i++)
+                adapter.checkCheckBox(i, true);
+
+            //After checking all items change button text
+            //selectButton.setText(getResources().getString(R.string.deselect_all));
+        //} else {
+            //If button text is Deselect All remove check from all items
+            //adapter.removeSelection();
+
+            //After checking all items change button text
+            //selectButton.setText(getResources().getString(R.string.select_all));
+        //}
     }
 
     private void onClickEvent(View view) {
@@ -117,6 +157,27 @@ public class GridViewFragment extends Fragment {
 
                     //notify the adapter and remove all checked selection
                     adapter.removeSelection();
+                }
+            }
+        });
+        selectButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Check the current text of Select Button
+                if (selectButton.getText().toString().equals(getResources().getString(R.string.select_all))) {
+
+                    //If Text is Select All then loop to all array List items and check all of them
+                    for (int i = 0; i < arrayList.size(); i++)
+                        adapter.checkCheckBox(i, true);
+
+                    //After checking all items change button text
+                    selectButton.setText(getResources().getString(R.string.deselect_all));
+                } else {
+                    //If button text is Deselect All remove check from all items
+                    adapter.removeSelection();
+
+                    //After checking all items change button text
+                    selectButton.setText(getResources().getString(R.string.select_all));
                 }
             }
         });

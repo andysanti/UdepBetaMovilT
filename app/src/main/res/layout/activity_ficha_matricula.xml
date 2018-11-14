@@ -8,115 +8,166 @@
     tools:context=".activities.FichaMatriculaActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:text="UNIVERSIDAD DE PIURA"
-        android:textSize="35dp" />
+        android:textSize="35dp"
+        />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:background="@color/gray"
         android:textSize="20dp"
-        android:text="FICHA DE MATRICULA" />
+        android:text="FICHA DE MATRICULA"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/link_fichmatr_Detalle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="15dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onClickMostrarOcultarDetalles"
+        android:text="Detalles"
+        android:textColor="@color/blue_primary_dark"
+        android:textSize="15dp" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/ll_fichmatr_Detalle"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:text="FACULTAD\t:\t" />
+        android:orientation="vertical"
+        android:padding="4dp"
+        android:background="@color/gray"
+        android:visibility="gone"
+        android:layout_marginBottom="15dp">
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="IN INGENIERIA" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FACULTAD\t:\t"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IN INGENIERIA"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CARRERA\t\t:\t"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ICSI ING. COMPUTACIÓN Y SIST."
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ALUMNO\t:\t"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/txt_fichmatr_estudiante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="000155085\nRAMIREZ DOMINGUEZ, VICTOR ARNALDO"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PERIODO\t:\t"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/txt_fichmatr_fecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2018 - II"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FECHA\t\t:\t"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/txt_fichmatr_semestre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="02/11/2018"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="7dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:text="CARRERA\t\t:\t" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ICSI ING. COMPUTACIÓN Y SIST." />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="7dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:text="ALUMNO\t:\t" />
-
-        <TextView android:id="@+id/txt_fichmatr_estudiante"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="000155085\nRAMIREZ DOMINGUEZ, VICTOR ARNALDO" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="7dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:text="PERIODO\t:\t" />
-
-        <TextView android:id="@+id/txt_fichmatr_fecha"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2018 - II" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="7dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:text="FECHA\t\t:\t" />
-
-        <TextView android:id="@+id/txt_fichmatr_semestre"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="02/11/2018" />
-    </LinearLayout>
-
-    <GridView
+    <ListView
         android:id="@+id/lst_fichmatr_Cursos"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="15dp" />
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:scrollbars="none" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="20dp"
-        android:text="Total de Créditos\t:\t20" />
+        android:text="Total de Créditos\t:\t20"
+        />
 
 </LinearLayout>

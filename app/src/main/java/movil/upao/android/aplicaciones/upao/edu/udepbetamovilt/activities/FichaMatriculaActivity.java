@@ -3,8 +3,15 @@ package movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.GridView;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.Models.Alumno;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.Models.Curso;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.R;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.adapters.FichaMatriculaGridAdapter;
@@ -12,7 +19,9 @@ import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.daos.*;
 
 public class FichaMatriculaActivity extends AppCompatActivity {
 
-    private GridView lst_fichmatr_Cursos;
+    private ListView lst_fichmatr_Cursos;
+    private LinearLayout ll_Detalle;
+    private TextView link_Detalle;
 
     private DAOSQLAlumno dao_Alumno;
     private DAOSQLCurso dao_Curso ;
@@ -25,6 +34,10 @@ public class FichaMatriculaActivity extends AppCompatActivity {
 
         lst_fichmatr_Cursos = findViewById(R.id.lst_fichmatr_Cursos);
 
+        dao_Alumno = new DAOSQLAlumno(this);
+        if(dao_Alumno.all().size()==0) {
+            dao_Alumno.save(new Alumno(-1, "000155085","71716463","Victor", "Ramirez Dominguez", "Piura", "961244567", "victor@udep.edu.pe", "M"));
+        }
         dao_Curso = new DAOSQLCurso(this);
         if(dao_Curso.all().size()==0) {
             /* 8 */
@@ -48,8 +61,28 @@ public class FichaMatriculaActivity extends AppCompatActivity {
 
         dao_Matricula = new DAOSQLMatricula(this, dao_Curso);
 
-        final FichaMatriculaGridAdapter adapter = new FichaMatriculaGridAdapter(this, dao_Matricula.allCursosByAlumno(1));
+        FichaMatriculaGridAdapter adapter = new FichaMatriculaGridAdapter(this, dao_Matricula.allCursosByAlumno(1));
         lst_fichmatr_Cursos.setAdapter(adapter);
+
+
+        ll_Detalle = findViewById(R.id.ll_fichmatr_Detalle);
+        link_Detalle = findViewById(R.id.link_fichmatr_Detalle);
+
+        SpannableString mitextoU = new SpannableString("Detalles");
+        mitextoU.setSpan(new UnderlineSpan(), 0, mitextoU.length(), 0);
+        link_Detalle.setText(mitextoU);
+    }
+
+    public void onClickMostrarOcultarDetalles(View v){
+        if (ll_Detalle.getVisibility() == v.VISIBLE) {
+            ll_Detalle.setVisibility(v.GONE);
+            //link_Detalle.setVisibility(v.VISIBLE);
+            Toast.makeText(this, "Ocultar Detalles", Toast.LENGTH_SHORT).show();
+        }else{
+            ll_Detalle.setVisibility(v.VISIBLE);
+            //link_Detalle.setVisibility(v.GONE);
+            Toast.makeText(this, "Mostrar Detalles", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
