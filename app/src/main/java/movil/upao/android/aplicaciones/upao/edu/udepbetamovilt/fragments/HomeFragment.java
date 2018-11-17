@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.R;
+import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities.RegistroMatriculaActivity;
 
 
 public class HomeFragment extends Fragment {
@@ -52,15 +53,15 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         //loadGridView(view);
         //loadCursoGridView(view);
-        onClickEvent(view);
+        //onClickEvent(view);
     }
-
+/*
     private void onClickEvent(View view) {
 
         view.findViewById(R.id.fichaMatriculaId).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(activity, PictureDetailActivity.class);
+                Intent intent = new Intent(activity, RegistroMatriculaActivity.class);
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
                     Explode explode = new Explode();
@@ -75,7 +76,7 @@ public class HomeFragment extends Fragment {
             }
         });
     }
-
+*/
     public void showToolbar(String tittle, boolean upButton, View view){
         Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
         ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
