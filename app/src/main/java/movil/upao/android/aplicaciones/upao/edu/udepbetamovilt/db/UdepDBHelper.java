@@ -38,7 +38,7 @@ public class UdepDBHelper extends SQLiteOpenHelper {
                     MatriculaTable.COLUMN_ID_ALUMNO + " INTEGER NOT NULL, " +
                     MatriculaTable.COLUMN_FECHA + " DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL, " +
                     MatriculaTable.COLUMN_SEMESTRE + " TEXT NOT NULL, " +
-                    MatriculaTable.COLUMN_NOTA + " INTEGER NOT NULL, " +
+                    MatriculaTable.COLUMN_NOTA + " INTEGER, " +
                     " FOREIGN KEY(" + MatriculaTable.COLUMN_ID_CURSO + ") REFERENCES " + CursoTable.TABLE_NAME + "(" + CursoTable.COLUMN_ID + ")," +
                     " FOREIGN KEY(" + MatriculaTable.COLUMN_ID_ALUMNO + ") REFERENCES " + AlumnoTable.TABLE_NAME + "(" + AlumnoTable.COLUMN_ID + "));";
 

@@ -30,7 +30,6 @@ public class DAOSQLMatricula {
         // writableDatabase.execSQL("INSERT INTO DETORDER VALUES('', 'url', '0', '0')");
 
         ContentValues values = new ContentValues();
-        values.put(MatriculaTable.COLUMN_ID, matricula.getId());
         values.put(MatriculaTable.COLUMN_ID_CURSO, matricula.getId_curso());
         values.put(MatriculaTable.COLUMN_ID_ALUMNO, matricula.getId_alumno());
         values.put(MatriculaTable.COLUMN_FECHA, matricula.getFecha());
@@ -181,6 +180,7 @@ public class DAOSQLMatricula {
 
         String query = "SELECT "+
                 t_curso + "." + CursoTable.COLUMN_ID + ", "+
+                t_curso + "." + CursoTable.COLUMN_CODIGO + ", "+
                 t_curso + "." + CursoTable.COLUMN_NOMBRE + ", "+
                 t_curso + "." + CursoTable.COLUMN_CICLO + ", "+
                 t_curso + "." + CursoTable.COLUMN_CREDITOS + ", "+
