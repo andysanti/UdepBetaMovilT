@@ -28,4 +28,6 @@
     <string name="delete">Delete</string>
     <string name="show">Show</string>
 
+    <string name="default_notification_channel_id">777</string>
+
 </resources>

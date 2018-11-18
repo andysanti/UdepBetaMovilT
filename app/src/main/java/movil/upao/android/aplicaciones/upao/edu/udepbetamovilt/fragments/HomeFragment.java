@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.R;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities.AsistenciaActivity;
+import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities.RegistroMatriculaActivity;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities.CursoActivity;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities.EstadoCuentaActivity;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities.FichaMatriculaActivity;
@@ -58,7 +59,7 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         //loadGridView(view);
         //loadCursoGridView(view);
-       // onClickEvent(view);
+        //onClickEvent(view);
     }
 /*
     private void onClickEvent(View view) {
@@ -66,6 +67,7 @@ public class HomeFragment extends Fragment {
         view.findViewById(R.id.fichaMatriculaId).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(activity, RegistroMatriculaActivity.class);
 
                 Toast toast1 =
                         Toast.makeText(getActivity().getApplicationContext(),
@@ -173,8 +175,7 @@ public class HomeFragment extends Fragment {
             }
         });
     }
-    */
-
+*/
     public void showToolbar(String tittle, boolean upButton, View view){
         Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
         ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
