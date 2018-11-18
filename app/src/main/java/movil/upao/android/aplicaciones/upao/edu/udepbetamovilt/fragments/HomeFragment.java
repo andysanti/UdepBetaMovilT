@@ -56,7 +56,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void onClickEvent(View view) {
-
+        /*
         view.findViewById(R.id.fichaMatriculaId).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,6 +74,7 @@ public class HomeFragment extends Fragment {
                 }
             }
         });
+        */
     }
 
     public void showToolbar(String tittle, boolean upButton, View view){

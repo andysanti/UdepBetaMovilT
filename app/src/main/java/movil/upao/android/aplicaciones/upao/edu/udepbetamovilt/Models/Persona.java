@@ -94,4 +94,8 @@ public class Persona {
     public void setGenero(String genero) {
         this.genero = genero;
     }
+
+    public String getNombres(){
+        return this.nombre+ " " + this.apellidos;
+    }
 }

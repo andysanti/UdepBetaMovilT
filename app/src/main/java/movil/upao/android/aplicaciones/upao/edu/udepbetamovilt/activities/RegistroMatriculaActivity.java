@@ -52,7 +52,7 @@ public class RegistroMatriculaActivity extends AppCompatActivity {
         fHelps = new FHelps();
 
         gridViewFragment = new GridViewFragment();
-        ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
+        ViewPager viewPager = findViewById(R.id.viewPager);
         setupViewPager(viewPager);
     }
 

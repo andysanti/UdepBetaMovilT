@@ -45,7 +45,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     public void onNewToken(String s) {
         super.onNewToken(s);
         Log.d(TAG, s);
-        Toast.makeText( this, "Token: " + s, Toast.LENGTH_LONG).show();
+        //Toast.makeText( this, "Token: " + s, Toast.LENGTH_LONG).show();
     }
 
     private void mostrarNotificacion(String title, String body) {

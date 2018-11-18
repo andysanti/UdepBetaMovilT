@@ -74,12 +74,12 @@ public class FichaMatriculaActivity extends AppCompatActivity {
     }
 
     public void onClickMostrarOcultarDetalles(View v){
-        if (ll_Detalle.getVisibility() == v.VISIBLE) {
-            ll_Detalle.setVisibility(v.GONE);
+        if (ll_Detalle.getVisibility() == View.VISIBLE) {
+            ll_Detalle.setVisibility(View.GONE);
             //link_Detalle.setVisibility(v.VISIBLE);
             Toast.makeText(this, "Ocultar Detalles", Toast.LENGTH_SHORT).show();
         }else{
-            ll_Detalle.setVisibility(v.VISIBLE);
+            ll_Detalle.setVisibility(View.VISIBLE);
             //link_Detalle.setVisibility(v.GONE);
             Toast.makeText(this, "Mostrar Detalles", Toast.LENGTH_SHORT).show();
         }

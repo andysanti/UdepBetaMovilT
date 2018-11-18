@@ -164,9 +164,9 @@ public class NotificacionesActivity extends AppCompatActivity {
             @Override
             protected void populateView(View v, Notificacion s, int i) {
                 // Get references to the views of grid_notificacion_item.xml
-                TextView titulo         = (TextView) v.findViewById(R.id.txtTituloNotif);
-                TextView descripcion    = (TextView) v.findViewById(R.id.txtDescripcionNotif);
-                ImageView icon          = (ImageView) v.findViewById(R.id.iconNotif);
+                TextView titulo         = v.findViewById(R.id.txtTituloNotif);
+                TextView descripcion    = v.findViewById(R.id.txtDescripcionNotif);
+                ImageView icon          = v.findViewById(R.id.iconNotif);
 
                 // Set their text
                 titulo.setText(s.getTitulo());

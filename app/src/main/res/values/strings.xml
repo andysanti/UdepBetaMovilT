@@ -18,6 +18,7 @@
 
     <string name="notificaciones">Notificaciones</string>
     <string name="registro_matricula">Matricula</string>
+    <string name="mensajes">Mensajes</string>
 
     <string name="no_notificaciones">No tiene notificaciones</string>
 
@@ -29,5 +30,7 @@
     <string name="show">Show</string>
 
     <string name="default_notification_channel_id">777</string>
+
+    <string name="input_placeholder">Escriba un mensaje</string>
 
 </resources>
