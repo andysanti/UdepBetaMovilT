@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.R;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities.AsistenciaActivity;
+import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities.ChatActivity;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities.RegistroMatriculaActivity;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities.CursoActivity;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities.EstadoCuentaActivity;
@@ -59,25 +60,16 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         //loadGridView(view);
         //loadCursoGridView(view);
-        //onClickEvent(view);
+        onClickEvent(view);
     }
-/*
+
     private void onClickEvent(View view) {
 
         view.findViewById(R.id.fichaMatriculaId).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(activity, RegistroMatriculaActivity.class);
-
-                Toast toast1 =
-                        Toast.makeText(getActivity().getApplicationContext(),
-                                "Proximamente", Toast.LENGTH_SHORT);
-
-                toast1.show();
-               // Intent intent = new Intent(getActivity(), FichaMatriculaActivity.class);
-               // startActivity(intent);
-
-
+                Intent intent = new Intent(getActivity(), FichaMatriculaActivity.class);
+                startActivity(intent);
             }
         });
         view.findViewById(R.id.miHorarioId).setOnClickListener(new View.OnClickListener() {
@@ -114,16 +106,8 @@ public class HomeFragment extends Fragment {
         view.findViewById(R.id.estadoCuentaId).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Toast toast1 =
-                        Toast.makeText(getActivity().getApplicationContext(),
-                                "Proximamente", Toast.LENGTH_SHORT);
-
-                toast1.show();
-               // Intent intent2 = new Intent(getActivity(), EstadoCuentaActivity.class);
-               // startActivity(intent2);
-
-
+                Intent intent = new Intent(getActivity(), EstadoCuentaActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -142,7 +126,7 @@ public class HomeFragment extends Fragment {
 
             }
         });
-
+        /*
         view.findViewById(R.id.misCursosId).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -158,24 +142,16 @@ public class HomeFragment extends Fragment {
 
             }
         });
-
-        view.findViewById(R.id.silaboId).setOnClickListener(new View.OnClickListener() {
+        */
+        view.findViewById(R.id.mensajeriaId).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Toast toast1 =
-                        Toast.makeText(getActivity().getApplicationContext(),
-                                "Proximamente", Toast.LENGTH_SHORT);
-
-                toast1.show();
-                //Intent intent2 = new Intent(getActivity(), SilaboActivity.class);
-                //startActivity(intent2);
-
-
+                Intent intent = new Intent(getActivity(), ChatActivity.class);
+                startActivity(intent);
             }
         });
     }
-*/
+
     public void showToolbar(String tittle, boolean upButton, View view){
         Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
         ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);

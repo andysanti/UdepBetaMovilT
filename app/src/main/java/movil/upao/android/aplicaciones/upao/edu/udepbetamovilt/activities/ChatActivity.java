@@ -32,8 +32,10 @@ import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.Models.Alumno;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.Models.ChatMessage;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.R;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.daos.DAOSQLAlumno;
+import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.utils.UdepSharedPreferences;
 
 public class ChatActivity extends AppCompatActivity {
+    private UdepSharedPreferences prefs;
 
     private FirebaseDatabase database;
     private DatabaseReference mensajesRef;
@@ -44,6 +46,7 @@ public class ChatActivity extends AppCompatActivity {
     private ListView lstMensajes;
 
     private DAOSQLAlumno dao_Alumno;
+    private String ActualUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +56,9 @@ public class ChatActivity extends AppCompatActivity {
         //configurar el botón Back (arriba)
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        prefs = new UdepSharedPreferences(this); // creo mis preferencias
+        ActualUser = prefs.getString(UdepSharedPreferences.PREF_USUARIO, null);
+
         database = FirebaseDatabase.getInstance();
         mensajesRef = database.getReference("mensajes");
 
@@ -60,9 +66,6 @@ public class ChatActivity extends AppCompatActivity {
         lstMensajes = findViewById(R.id.lstMensajes);
 
         dao_Alumno = new DAOSQLAlumno(this);
-        if(dao_Alumno.all().size()==0) {
-            dao_Alumno.save(new Alumno(-1, "000155085","71716463","Victor", "Ramirez Dominguez", "Piura", "961244567", "victor@udep.edu.pe", "M"));
-        }
         int ultimo = dao_Alumno.all().size() - 1;
         Alumno alumno = dao_Alumno.all().get( ultimo );
         /*
@@ -118,7 +121,7 @@ public class ChatActivity extends AppCompatActivity {
                 RelativeLayout my_layout    = v.findViewById(R.id.rl_my_message);
                 RelativeLayout their_layout = v.findViewById(R.id.rl_their_message);
 
-                if (message.isBelongsToCurrentUser()) {
+                if (message.getUser().equals(ActualUser)) { //message.isBelongsToCurrentUser()
                     // this message was sent by us so let's create a basic chat bubble on the right
 
                     holder.messageBody = (TextView) v.findViewById(R.id.my_message_body);
@@ -163,23 +166,23 @@ public class ChatActivity extends AppCompatActivity {
         if (mensaje.length() > 0) {
             /*
             ChatMessage oChat = new ChatMessage();
-            oChat.setIdcontacto(prefs.getString(ChatkiSharedPreferences.PREF_USUARIO, null));
+            oChat.setUser(prefs.getString(ChatkiSharedPreferences.PREF_USUARIO, null));
             oChat.setName(prefs.getString(ChatkiSharedPreferences.PREF_NOMBRE_USUARIO, null));
             oChat.setMessage(mensaje);
             oChat.setTime(String.valueOf(System.currentTimeMillis()));
             oChat.setBelongsToCurrentUser(true);
             */
-
             int ultimo = dao_Alumno.all().size() - 1;
             Alumno alumno = dao_Alumno.all().get( ultimo );
 
             mensajesActualRef = mensajesRef.push(); // GENERO UN ID
             mensajesActualRef.setValue(
                     new ChatMessage(
-                            mensajesActualRef.getKey(), alumno.getNombres(),
+                            ActualUser, //mensajesActualRef.getKey(),
+                            alumno.getNombres(),
                             mensaje,
-                            new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime()),
-                            true ));
+                            new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime())
+                    ));
 
             txtMensaje.getText().clear();
         }

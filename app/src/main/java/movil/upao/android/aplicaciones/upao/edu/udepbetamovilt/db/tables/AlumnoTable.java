@@ -7,6 +7,7 @@ package movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.db.tables;
 public class AlumnoTable {
     public static final String TABLE_NAME = "ALUMNO";
     public static final String COLUMN_ID = "ID";
+    public static final String COLUMN_CARNE = "CARNE";
     public static final String COLUMN_DNI = "DNI";
     public static final String COLUMN_NOMBRE = "NOMBRE";
     public static final String COLUMN_APELLIDOS = "APELLIDOS";
