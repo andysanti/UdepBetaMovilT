@@ -190,4 +190,9 @@ public class ChatActivity extends AppCompatActivity {
         //Toast.makeText(this, "Escriba un mensaje", Toast.LENGTH_SHORT).show();
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        this.finish();
+    }
 }
