@@ -61,7 +61,9 @@ public class LoginActivity extends AppCompatActivity {
         Alumno alumno = dao_Alumno.getLogin( Usuario[0], Usuario[1]);
 
         if( alumno != null ){
-            prefs.putString(UdepSharedPreferences.PREF_USUARIO, Usuario[0]);
+            prefs.putString(UdepSharedPreferences.PREF_USUARIO, alumno.getNro_carne());
+            prefs.putInt(UdepSharedPreferences.PREF_ID, alumno.getId());
+            prefs.putString(UdepSharedPreferences.PREF_NOMBRES, alumno.getNombres());
 
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);

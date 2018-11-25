@@ -185,7 +185,8 @@ public class DAOSQLMatricula {
                 t_curso + "." + CursoTable.COLUMN_CICLO + ", "+
                 t_curso + "." + CursoTable.COLUMN_CREDITOS + ", "+
                 t_curso + "." + CursoTable.COLUMN_PROFESOR + ", "+
-                t_curso + "." + CursoTable.COLUMN_OBSERVACIONES + " "+
+                t_curso + "." + CursoTable.COLUMN_OBSERVACIONES + ", "+
+                t_curso + "." + CursoTable.COLUMN_NOTA + " "+
                 " FROM " + t_curso +
                 " JOIN " + t_matricula + " ON " + t_curso + "." + CursoTable.COLUMN_ID + "=" + t_matricula + "." + MatriculaTable.COLUMN_ID_CURSO +
                 " WHERE "+ t_matricula + "." + MatriculaTable.COLUMN_ID_ALUMNO + "=" + id_alumno;
