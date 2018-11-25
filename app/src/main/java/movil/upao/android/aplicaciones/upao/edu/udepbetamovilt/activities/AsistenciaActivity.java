@@ -56,7 +56,7 @@ public class AsistenciaActivity extends AppCompatActivity implements AdapterView
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         asistenciasRef = database.getReference("asistencias");
-
+        /*
         asistenciasRef.setValue(null);
 
         List<Detalle_Asistencia> detAsistencias = new ArrayList<Detalle_Asistencia>();
@@ -86,7 +86,7 @@ public class AsistenciaActivity extends AppCompatActivity implements AdapterView
         detAsistencias3.add(new Detalle_Asistencia(5,4,"TESIS I","CICLO DE VIDA DEL ARTEFACTO DE SOFTWARE","A"));
         detAsistencias3.add(new Detalle_Asistencia(6,4,"TESIS I","PLANTILLA DEL INFORME DE TESIS","A"));
         detAsistencias3.add(new Detalle_Asistencia(7,4,"TESIS I","PLANTILLA DEL INFORME DE TESIS","A"));
-
+        */
         //detAsistencias2.add(new Detalle_Asistencia());
 
         /*asistenciasRef.push().setValue(
@@ -96,9 +96,8 @@ public class AsistenciaActivity extends AppCompatActivity implements AdapterView
                 new Asistencia(3, 100, 0, "Habilitado", "201979", "https://ta.azureedge.net/p/images/usuarios/l/ESGJ1fKw1UiaDARQsPv6Q58msg2tWn_f0.jpg", "AUDITORIA DE SISTEMAS DE LA INFORMACIÓN", "Silvia Rodriguez",detAsistencias2));
         asistenciasRef.push().setValue(
                 new Asistencia(4, 5, 95, "Inhabilitado", "201979", "https://ta.azureedge.net/p/images/usuarios/l/y9HJoZ711Ug5FwKn9EhETb43rpJFDNmO0.jpg", "DESARROLLO PARA APLICACIONES MOVILES", "ALI LOZANO CHU",detAsistencias3));
-
-
-            */
+        */
+        /*
         Asistencia asistencia = new Asistencia(2, 76, 24, "Habilitado", "201979", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjcwsANNsmcCfuFa820dYuPi3M8_3V9ol1eq0jNPwCpCKDuvaF", "SISTEMAS DE INFORMACION ESTRATEGICA", detAsistencias);
         asistenciasRef.child(""+asistencia.getId()).child("asistencias").setValue(asistencia.getAsistencias());
         asistenciasRef.child(""+asistencia.getId()).child("faltas").setValue(asistencia.getFaltas());
@@ -125,6 +124,7 @@ public class AsistenciaActivity extends AppCompatActivity implements AdapterView
         asistenciasRef.child(""+asistencia.getId()).child("photo_url").setValue(asistencia.getPhoto_url());
         asistenciasRef.child(""+asistencia.getId()).child("curso").setValue(asistencia.getCurso());
         asistenciasRef.child(""+asistencia.getId()).child("detalle_asistencia").setValue(asistencia.getDetAsistencias());
+        */
 
         //detalleRef.push().setValue(new Detalle_Asistencia());
        /*asistenciasRef.addValueEventListener(new ValueEventListener() {
