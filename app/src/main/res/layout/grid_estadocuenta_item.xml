@@ -1,29 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="15dp">
+    android:padding="15dp"
+    android:background="@drawable/draw_estado_cuenta">
 
 
     <LinearLayout
         android:id="@+id/descrpSection"
-        android:layout_width="wrap_content"
+        android:layout_width="268dp"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/idtxtdescripcion_cuenta"
+            android:id="@+id/txtdescripcion_cuenta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
+            android:textStyle="bold"
             android:text="CONVALID EXTERNA" />
 
         <TextView
-            android:id="@+id/idtxtfecha_cuenta"
+            android:id="@+id/txtfecha_cuenta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/idtxtdescripcion_cuenta"
+            android:layout_below="@id/txtdescripcion_cuenta"
             android:layout_marginRight="25dp"
             android:text="201710 | 10 FEB 2017" />
 
@@ -38,12 +41,13 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/idtxtmonto_cuenta"
+            android:id="@+id/txtmonto_cuenta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
             android:layout_gravity="right"
-            android:text="S/.300" />
+            android:layout_marginBottom="10dp"
+            android:text="S/.300"
+            android:textColor="@color/app_green" />
     </LinearLayout>
 
 

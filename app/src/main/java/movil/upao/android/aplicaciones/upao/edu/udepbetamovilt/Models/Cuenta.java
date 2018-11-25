@@ -9,6 +9,7 @@ public class Cuenta {
     private String descripcion;
     private String fecha;
     private float monto;
+    private boolean mora;
 
     public Cuenta() {
     }
@@ -17,6 +18,14 @@ public class Cuenta {
         this.id = id;
         this.descripcion = descripcion;
         this.fecha = fecha;
+        this.monto = monto;
+    }
+
+    public Cuenta(int id, String descripcion, String fecha, float monto, boolean mora) {
+        this.id = id;
+        this.descripcion = descripcion;
+        this.fecha = fecha;
+        this.mora = mora;
         this.monto = monto;
     }
 
@@ -50,5 +59,13 @@ public class Cuenta {
 
     public void setMonto(float monto) {
         this.monto = monto;
+    }
+
+    public boolean isMora() {
+        return mora;
+    }
+
+    public void setMora(boolean mora) {
+        this.mora = mora;
     }
 }

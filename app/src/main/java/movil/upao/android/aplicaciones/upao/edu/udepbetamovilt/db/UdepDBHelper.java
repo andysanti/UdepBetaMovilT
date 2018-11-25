@@ -13,7 +13,8 @@ public class UdepDBHelper extends SQLiteOpenHelper {
     private static final String SQL_CREATE_ALUMNO =
             "CREATE TABLE " + AlumnoTable.TABLE_NAME + " (" +
                     AlumnoTable.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    AlumnoTable.COLUMN_DNI + " TEXT NOT NULL, " +
+                    AlumnoTable.COLUMN_DNI + " TEXT unique NOT NULL, " +
+                    AlumnoTable.COLUMN_CARNE + " TEXT unique NOT NULL, " +
                     AlumnoTable.COLUMN_NOMBRE + " TEXT NOT NULL, " +
                     AlumnoTable.COLUMN_APELLIDOS + " TEXT NOT NULL, " +
                     AlumnoTable.COLUMN_DIRECCION + " TEXT, " +
@@ -24,7 +25,7 @@ public class UdepDBHelper extends SQLiteOpenHelper {
     private static final String SQL_CREATE_CURSO =
             "CREATE TABLE " + CursoTable.TABLE_NAME + " (" +
                     CursoTable.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    CursoTable.COLUMN_CODIGO + " TEXT NOT NULL, " +
+                    CursoTable.COLUMN_CODIGO + " TEXT unique NOT NULL, " +
                     CursoTable.COLUMN_NOMBRE + " TEXT NOT NULL, " +
                     CursoTable.COLUMN_CICLO + " TEXT NOT NULL, " +
                     CursoTable.COLUMN_CREDITOS + " INTEGER NOT NULL, " +

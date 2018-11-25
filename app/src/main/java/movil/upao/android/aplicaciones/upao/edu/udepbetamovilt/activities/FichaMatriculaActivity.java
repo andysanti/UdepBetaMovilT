@@ -23,7 +23,6 @@ public class FichaMatriculaActivity extends AppCompatActivity {
     private LinearLayout ll_Detalle;
     private TextView link_Detalle;
 
-    private DAOSQLAlumno dao_Alumno;
     private DAOSQLCurso dao_Curso ;
     private DAOSQLMatricula dao_Matricula;
 
@@ -32,12 +31,11 @@ public class FichaMatriculaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ficha_matricula);
 
+        //configurar el botón Back (arriba)
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         lst_fichmatr_Cursos = findViewById(R.id.lst_fichmatr_Cursos);
 
-        dao_Alumno = new DAOSQLAlumno(this);
-        if(dao_Alumno.all().size()==0) {
-            dao_Alumno.save(new Alumno(-1, "000155085","71716463","Victor", "Ramirez Dominguez", "Piura", "961244567", "victor@udep.edu.pe", "M"));
-        }
         dao_Curso = new DAOSQLCurso(this);
         if(dao_Curso.all().size()==0) {
             /* 8 */
@@ -93,5 +91,11 @@ public class FichaMatriculaActivity extends AppCompatActivity {
             startActivity(intent);
             this.finish();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        this.finish();
     }
 }

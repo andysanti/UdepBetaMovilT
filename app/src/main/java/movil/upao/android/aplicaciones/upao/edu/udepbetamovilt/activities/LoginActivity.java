@@ -11,7 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.Models.Alumno;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.R;
+import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.daos.DAOSQLAlumno;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.utils.UdepSharedPreferences;
 
 public class LoginActivity extends AppCompatActivity {
@@ -19,6 +21,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText txtUsuario;
     private EditText txtPassword;
     private Button btnIngresar;
+    private DAOSQLAlumno dao_Alumno;
     private UdepSharedPreferences prefs;
 
     @Override
@@ -29,6 +32,8 @@ public class LoginActivity extends AppCompatActivity {
         txtUsuario = findViewById(R.id.idtxtUsuario);
         txtPassword = findViewById(R.id.idtxtPassword);
         btnIngresar = findViewById(R.id.idbtnIngresar);
+
+        dao_Alumno = new DAOSQLAlumno(this);
 
         /*btnIngresar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,14 +54,22 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
     public void pantallaAula(View view) {
-        if( txtPassword.getText().toString().equals("Sullana") ){
+        String[] Usuario = new String[]{
+                txtUsuario.getText().toString(),
+                txtPassword.getText().toString()
+        };
+        Alumno alumno = dao_Alumno.getLogin( Usuario[0], Usuario[1]);
+
+        if( alumno != null ){
+            prefs.putString(UdepSharedPreferences.PREF_USUARIO, Usuario[0]);
+
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
-            prefs.putString(UdepSharedPreferences.PREF_USUARIO, txtUsuario.getText().toString());
             this.finish();
-        }else{
+
+            Toast.makeText( this, "Bienvenido, "+ alumno.getNombre() , Toast.LENGTH_LONG).show();
+        }else
             abre_dialogo_error(view);
-        }
 
     }
 

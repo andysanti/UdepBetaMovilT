@@ -5,7 +5,7 @@ import java.util.Random;
 public class ChatMessage {
     //private MemberData data; // data of the user that sent this message
     private String id;
-    private String idcontacto;
+    private String user;
     private String name;
     private String message; // message body
     private String time;
@@ -16,8 +16,8 @@ public class ChatMessage {
         this.color = getRandomColor();
     }
 
-    public ChatMessage(String idcontacto, String name, String message, String time, boolean belongsToCurrentUser) {
-        this.idcontacto = idcontacto;
+    public ChatMessage(String user, String name, String message, String time, boolean belongsToCurrentUser) {
+        this.user = user;
         this.name = name;
         this.message = message;
         this.time = time;
@@ -25,21 +25,12 @@ public class ChatMessage {
         this.belongsToCurrentUser = belongsToCurrentUser;
     }
 
-    public ChatMessage(String idcontacto, String name, String message, String time) {
-        this.idcontacto = idcontacto;
+    public ChatMessage(String user, String name, String message, String time) {
+        this.user = user;
         this.name = name;
         this.message = message;
         this.time = time;
         this.color = getRandomColor();
-    }
-
-    public ChatMessage(String id, String idcontacto, String name, String message, String time, String color) {
-        this.id = id;
-        this.idcontacto = idcontacto;
-        this.name = name;
-        this.message = message;
-        this.time = time;
-        this.color = color;
     }
 
     public String getId() {
@@ -50,12 +41,12 @@ public class ChatMessage {
         this.id = id;
     }
 
-    public String getIdcontacto() {
-        return idcontacto;
+    public String getUser() {
+        return user;
     }
 
-    public void setIdcontacto(String idcontacto) {
-        this.idcontacto = idcontacto;
+    public void setUser(String user) {
+        this.user = user;
     }
 
     public String getName() {
