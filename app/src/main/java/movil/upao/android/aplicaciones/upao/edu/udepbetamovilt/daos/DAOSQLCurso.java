@@ -30,6 +30,7 @@ public class DAOSQLCurso {
         values.put(CursoTable.COLUMN_CREDITOS, curso.getCreditos());
         values.put(CursoTable.COLUMN_PROFESOR, curso.getProfesor());
         values.put(CursoTable.COLUMN_OBSERVACIONES, curso.getObservaciones());
+        values.put(CursoTable.COLUMN_NOTA, curso.getNota());
 
         if (curso.getId() == -1) {
             db.insert(CursoTable.TABLE_NAME, null, values);
@@ -51,9 +52,62 @@ public class DAOSQLCurso {
                         CursoTable.COLUMN_CICLO,
                         CursoTable.COLUMN_CREDITOS,
                         CursoTable.COLUMN_PROFESOR,
-                        CursoTable.COLUMN_OBSERVACIONES
+                        CursoTable.COLUMN_OBSERVACIONES,
+                        CursoTable.COLUMN_NOTA
                 },
                 null, null, null, null, null);
+
+        List<Curso> cursos = new ArrayList<>();
+        while (cursor.moveToNext()) {
+            Curso curso = cursorToCurso(cursor);
+            cursos.add(curso);
+        }
+        cursor.close();
+        db.close();
+
+        return cursos;
+    }
+
+    public List<Curso> allForMatricula() {
+        SQLiteDatabase db = this.dbHelper.getReadableDatabase();
+
+        Cursor cursor = db.query(CursoTable.TABLE_NAME, new String[]{
+                        CursoTable.COLUMN_ID,
+                        CursoTable.COLUMN_CODIGO,
+                        CursoTable.COLUMN_NOMBRE,
+                        CursoTable.COLUMN_CICLO,
+                        CursoTable.COLUMN_CREDITOS,
+                        CursoTable.COLUMN_PROFESOR,
+                        CursoTable.COLUMN_OBSERVACIONES,
+                        CursoTable.COLUMN_NOTA
+                },
+                CursoTable.COLUMN_CICLO + " IN (?, ?, ?)", new String[]{ "08", "09", "10" }, null, null, null);
+
+        List<Curso> cursos = new ArrayList<>();
+        while (cursor.moveToNext()) {
+            Curso curso = cursorToCurso(cursor);
+            cursos.add(curso);
+        }
+        cursor.close();
+        db.close();
+
+        return cursos;
+    }
+
+    public List<Curso> getByCiclo(String ciclo) {
+        SQLiteDatabase db = this.dbHelper.getReadableDatabase();
+
+        Cursor cursor = db.query(CursoTable.TABLE_NAME, new String[]{
+                        CursoTable.COLUMN_ID,
+                        CursoTable.COLUMN_CODIGO,
+                        CursoTable.COLUMN_NOMBRE,
+                        CursoTable.COLUMN_CICLO,
+                        CursoTable.COLUMN_CREDITOS,
+                        CursoTable.COLUMN_PROFESOR,
+                        CursoTable.COLUMN_OBSERVACIONES,
+                        CursoTable.COLUMN_NOTA
+                },
+                CursoTable.COLUMN_CICLO + "= ?", new String[]{ ciclo }, null, null, null);
 
         List<Curso> cursos = new ArrayList<>();
         while (cursor.moveToNext()) {
@@ -75,6 +129,7 @@ public class DAOSQLCurso {
         curso.setCreditos(cursor.getInt(cursor.getColumnIndex(CursoTable.COLUMN_CREDITOS)));
         curso.setProfesor(cursor.getString(cursor.getColumnIndex(CursoTable.COLUMN_PROFESOR)));
         curso.setObservaciones(cursor.getString(cursor.getColumnIndex(CursoTable.COLUMN_OBSERVACIONES)));
+        curso.setNota(cursor.getInt(cursor.getColumnIndex(CursoTable.COLUMN_NOTA)));
         return curso;
     }
 
@@ -97,7 +152,8 @@ public class DAOSQLCurso {
                         CursoTable.COLUMN_CICLO,
                         CursoTable.COLUMN_CREDITOS,
                         CursoTable.COLUMN_PROFESOR,
-                        CursoTable.COLUMN_OBSERVACIONES
+                        CursoTable.COLUMN_OBSERVACIONES,
+                        CursoTable.COLUMN_NOTA
                 },
                 CursoTable.COLUMN_ID + " = ?", new String[]{String.valueOf(id)}, null, null, null);
 

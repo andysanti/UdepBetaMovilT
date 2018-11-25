@@ -9,4 +9,5 @@ public class CursoTable {
     public static final String COLUMN_CREDITOS = "CREDITOS";
     public static final String COLUMN_PROFESOR = "PROFESOR";
     public static final String COLUMN_OBSERVACIONES = "OBSERVACIONES";
+    public static final String COLUMN_NOTA = "NOTA";
 }

@@ -59,7 +59,7 @@ public class GridViewFragment extends Fragment {
         //for(int i = 0; i < dao_Curso.all().size(); i++)
             //arrayList.add(dao_Curso.all().get(i).getNombre());
 
-        adapter = new GridListAdapter(context, dao_Curso.all());
+        adapter = new GridListAdapter(context, dao_Curso.allForMatricula());
         gridView.setAdapter(adapter);
     }
 
@@ -80,7 +80,8 @@ public class GridViewFragment extends Fragment {
             StringBuilder stringBuilder = new StringBuilder();
             for (int i = 0; i < selectedRows.size(); i++) {
                 if (selectedRows.valueAt(i)) {
-                    Curso c =  dao_Curso.all().get(selectedRows.keyAt(i));
+                    //Curso c = dao_Curso.all().get(selectedRows.keyAt(i));
+                    Curso c = (Curso) adapter.getItem(i);
                     cursos_selected.add(c);
                 }
             }

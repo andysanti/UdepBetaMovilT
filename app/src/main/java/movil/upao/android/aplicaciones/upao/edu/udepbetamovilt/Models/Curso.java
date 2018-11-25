@@ -12,6 +12,7 @@ public class Curso {
     private int creditos;
     private String profesor;
     private String observaciones;
+    private int nota;
 
     public Curso() {
     }
@@ -24,6 +25,18 @@ public class Curso {
         this.creditos = creditos;
         this.profesor = profesor;
         this.observaciones = observaciones;
+        this.nota = 0;
+    }
+
+    public Curso(int id, String codigo, String nombre, String ciclo, int creditos, String profesor, String observaciones, int nota) {
+        this.id = id;
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.ciclo = ciclo;
+        this.creditos = creditos;
+        this.profesor = profesor;
+        this.observaciones = observaciones;
+        this.nota = nota;
     }
 
     public int getId() {
@@ -80,5 +93,13 @@ public class Curso {
 
     public void setObservaciones(String observaciones) {
         this.observaciones = observaciones;
+    }
+
+    public int getNota() {
+        return nota;
+    }
+
+    public void setNota(int nota) {
+        this.nota = nota;
     }
 }

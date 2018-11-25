@@ -20,14 +20,11 @@ import android.widget.Toast;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.R;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities.AsistenciaActivity;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities.ChatActivity;
-import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities.RegistroMatriculaActivity;
-import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities.CursoActivity;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities.EstadoCuentaActivity;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities.FichaMatriculaActivity;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities.HorarioActivity;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities.MainActivity;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities.ReporteNotasActivity;
-import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities.SilaboActivity;
 
 
 public class HomeFragment extends Fragment {
@@ -91,16 +88,8 @@ public class HomeFragment extends Fragment {
         view.findViewById(R.id.asistenciaId).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Toast toast1 =
-                        Toast.makeText(getActivity().getApplicationContext(),
-                                "Proximamente", Toast.LENGTH_SHORT);
-
-                toast1.show();
-                //Intent intent2 = new Intent(getActivity(), AsistenciaActivity.class);
-                //startActivity(intent2);
-
-
+                Intent intent = new Intent(getActivity(), AsistenciaActivity.class);
+                startActivity(intent);
             }
         });
         view.findViewById(R.id.estadoCuentaId).setOnClickListener(new View.OnClickListener() {
@@ -114,35 +103,10 @@ public class HomeFragment extends Fragment {
         view.findViewById(R.id.reporteNotasId).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Toast toast1 =
-                        Toast.makeText(getActivity().getApplicationContext(),
-                                "Proximamente", Toast.LENGTH_SHORT);
-
-                toast1.show();
-                //Intent intent2 = new Intent(getActivity(), ReporteNotasActivity.class);
-                //startActivity(intent2);
-
-
+                Intent intent = new Intent(getActivity(), ReporteNotasActivity.class);
+                startActivity(intent);
             }
         });
-        /*
-        view.findViewById(R.id.misCursosId).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Toast toast1 =
-                        Toast.makeText(getActivity().getApplicationContext(),
-                                "Proximamente", Toast.LENGTH_SHORT);
-
-                toast1.show();
-               // Intent intent2 = new Intent(getActivity(), CursoActivity.class);
-                //startActivity(intent2);
-
-
-            }
-        });
-        */
         view.findViewById(R.id.mensajeriaId).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

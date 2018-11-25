@@ -30,7 +30,8 @@ public class UdepDBHelper extends SQLiteOpenHelper {
                     CursoTable.COLUMN_CICLO + " TEXT NOT NULL, " +
                     CursoTable.COLUMN_CREDITOS + " INTEGER NOT NULL, " +
                     CursoTable.COLUMN_PROFESOR + " TEXT, " +
-                    CursoTable.COLUMN_OBSERVACIONES + " TEXT )";
+                    CursoTable.COLUMN_OBSERVACIONES + " TEXT, " +
+                    CursoTable.COLUMN_NOTA + " INTEGER )";
 
     private static final String SQL_CREATE_MATRICULA =
             "CREATE TABLE " + MatriculaTable.TABLE_NAME + " (" +

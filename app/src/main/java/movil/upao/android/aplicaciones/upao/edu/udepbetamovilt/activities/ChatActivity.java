@@ -66,9 +66,10 @@ public class ChatActivity extends AppCompatActivity {
         lstMensajes = findViewById(R.id.lstMensajes);
 
         dao_Alumno = new DAOSQLAlumno(this);
+        /*
         int ultimo = dao_Alumno.all().size() - 1;
         Alumno alumno = dao_Alumno.all().get( ultimo );
-        /*
+
         mensajesActualRef = mensajesRef.push(); // GENERO UN ID
         mensajesActualRef.setValue(
                 new ChatMessage(
@@ -172,14 +173,12 @@ public class ChatActivity extends AppCompatActivity {
             oChat.setTime(String.valueOf(System.currentTimeMillis()));
             oChat.setBelongsToCurrentUser(true);
             */
-            int ultimo = dao_Alumno.all().size() - 1;
-            Alumno alumno = dao_Alumno.all().get( ultimo );
 
             mensajesActualRef = mensajesRef.push(); // GENERO UN ID
             mensajesActualRef.setValue(
                     new ChatMessage(
                             ActualUser, //mensajesActualRef.getKey(),
-                            alumno.getNombres(),
+                            prefs.getString(UdepSharedPreferences.PREF_NOMBRES, null),
                             mensaje,
                             new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime())
                     ));

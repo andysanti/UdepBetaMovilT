@@ -4,65 +4,126 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".activities.AsistenciaActivity">
 
-    <TextView
-        android:id="@+id/lblAsistencia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:text="Asistencias"
-        app:layout_constraintStart_toStartOf="@+id/txtCurso"
-        app:layout_constraintTop_toBottomOf="@+id/txtCurso" />
+    <ImageView
+        android:id="@+id/imgstar"
+        android:layout_width="42dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="25dp"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="@id/lblCurso"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/txtAsistencias2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="95dp"
-        android:layout_marginEnd="16dp"
-        android:text="Asistencias"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/txtCurso"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/lblCurso"
+        android:layout_width="240dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="5dp"
         android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imgstar"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblAsistencias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
+        android:text="ASISTENCIAS"
+
+        app:layout_constraintStart_toEndOf="@+id/imgstar"
+        app:layout_constraintTop_toTopOf="@+id/lblCurso"
+        />
 
     <TextView
         android:id="@+id/lblFaltas"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginTop="2dp"
-        android:text="Faltas"
-        app:layout_constraintBottom_toTopOf="@+id/lblSemestre"
-        app:layout_constraintStart_toStartOf="@+id/lblAsistencia"
-        app:layout_constraintTop_toBottomOf="@+id/lblAsistencia" />
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="FALTAS"
+        app:layout_constraintStart_toEndOf="@+id/imgstar"
+        app:layout_constraintTop_toTopOf="@+id/lblAsistencias"
+        />
 
     <TextView
         android:id="@+id/lblSemestre"
         android:layout_width="wrap_content"
-        android:layout_height="16dp"
-        android:layout_marginTop="19dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
         android:text="TextView"
-        app:layout_constraintStart_toStartOf="@+id/lblFaltas"
-        app:layout_constraintTop_toBottomOf="@+id/lblAsistencia" />
+        android:textColor="@color/gray"
+        app:layout_constraintStart_toEndOf="@+id/imgstar"
+        app:layout_constraintTop_toBottomOf="@+id/lblAsistencias" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="54dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginBottom="16dp"
-        android:src="@drawable/bell"
-        app:layout_constraintBottom_toBottomOf="@+id/lblSemestre"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCurso" />
+    <TextView
+        android:id="@+id/lblNroAsistencias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
+        android:text="TextView"
+        android:gravity="center"
+        android:textColor="@color/blue_primary"
+        app:layout_constraintStart_toEndOf="@+id/lblAsistencias"
+        app:layout_constraintTop_toTopOf="@+id/lblCurso"
+        />
+
+    <TextView
+        android:id="@+id/lblNroFaltas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:gravity="center"
+        android:textColor="@color/red_primary"
+        app:layout_constraintStart_toEndOf="@+id/lblFaltas"
+        app:layout_constraintTop_toTopOf="@+id/lblNroAsistencias"
+        />
+
+    <TextView
+        android:id="@+id/lblEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@+id/lblSemestre"
+        app:layout_constraintTop_toTopOf="@+id/lblNroFaltas"
+
+        />
+
+    <TextView
+        android:id="@+id/lblAsistencias2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:text="Asistencias"
+        android:textColor="@color/gray_light"
+        app:layout_constraintStart_toEndOf="@+id/lblEstado"
+        app:layout_constraintTop_toTopOf="@+id/lblNroAsistencias2"
+        />
+
+    <TextView
+        android:id="@+id/lblNroAsistencias2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:textColor="@color/orange_primary"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@+id/lblNroFaltas"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/lblAsistencias2"/>
+
 </android.support.constraint.ConstraintLayout>

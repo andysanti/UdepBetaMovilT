@@ -10,6 +10,7 @@
     <string name="aula_virtual">Aula Virtual</string>
     <string name="mi_horario">Mi Horario</string>
     <string name="asistencias">Asistencias</string>
+    <string name="detalle_asistencias">Detalle Asistencia</string>
     <string name="ficha_matricula">Ficha Matricula</string>
     <string name="estado_cuenta">Estado Cuenta</string>
     <string name="reporte_notas">Reporte Notas</string>

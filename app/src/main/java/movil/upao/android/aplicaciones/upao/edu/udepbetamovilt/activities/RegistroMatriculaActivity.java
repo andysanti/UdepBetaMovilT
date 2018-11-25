@@ -25,6 +25,7 @@ import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.adapters.ViewPage
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.daos.*;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.fragments.GridViewFragment;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.utils.FHelps;
+import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.utils.UdepSharedPreferences;
 
 public class RegistroMatriculaActivity extends AppCompatActivity {
 
@@ -35,6 +36,8 @@ public class RegistroMatriculaActivity extends AppCompatActivity {
     private DAOSQLCurso dao_Curso ;
     private DAOSQLMatricula dao_Matricula;
     private FHelps fHelps;
+    private UdepSharedPreferences prefs;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +46,7 @@ public class RegistroMatriculaActivity extends AppCompatActivity {
         //configurar el botón Back (arriba)
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        prefs = new UdepSharedPreferences(this);
         dao_Curso = new DAOSQLCurso(this);
         dao_Alumno = new DAOSQLAlumno(this);
         dao_Matricula = new DAOSQLMatricula(this, dao_Curso);
@@ -97,8 +101,7 @@ public class RegistroMatriculaActivity extends AppCompatActivity {
     private void registrarMatricula(List<Curso> cursos) {
         final Context ctx = this;
 
-        int ultimo = dao_Alumno.all().size() - 1;
-        int id_alumno = dao_Alumno.all().get( ultimo ).getId();
+        int id_alumno =  prefs.getInt(UdepSharedPreferences.PREF_ID, -1);
 
         for (int i = 0; i < cursos.size(); i++)
         {
