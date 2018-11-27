@@ -29,8 +29,52 @@ Proyecto móviles
 
 
 * ## Historias de usuario
+
+![](https://i.imgur.com/SgYHax1.png)
+![](https://i.imgur.com/Es5IU7q.png)
+![](https://i.imgur.com/P5gymJx.png)
+![](https://i.imgur.com/EMa2TT7.png)
+![](https://i.imgur.com/r0TR666.png)
+![](https://i.imgur.com/g4Ml31e.png)
+![](https://i.imgur.com/cvuBDSn.png)
+![](https://i.imgur.com/AVxaaFa.png)
+![](https://i.imgur.com/CKAsvQl.png)
+![](https://i.imgur.com/gNGoDxM.png)
+
 * ## Diseño de su base de datos estructurada
 * ## Diseño de su base de datos en firebase, explicar el proceso y por que se desmoralizó de esa forma (Debe estar alineada a su interfaz, como el ejemplo de twitter)
 * ## Problemas encontrados en el desarrollo
+
+| Nro | Descripción | Impacto |
+| --- | ----------- | -------- |
+| 1   | Mala estimación de tiempos  | Alto     |
+| 2   | Planificaciones excesivamente optimistas | Medio     |
+| 3   | Excesivas tareas  | Alto     |
+| 4   | Incorporación de características | Alto     |
+| 5   | Errores con el IDE Android Studio | Muy Alto |
+
+[Mas info sobre errores](http://www.javiergarzas.com/2010/06/errores-clasicos-desarrollo-software.html)
+
 * ## Screenshots del proyecto final
+
 * ## Cuadro resumen de historias de usuario
+---
+| Historia de Usuario  | Puntos | Terminada |
+| -------------------- | ------ | --------- |
+| Login                | 5      | Si        |
+| Cerrar Sesión        | 5      | No        |
+| Aula Virtual         | 5      | Si        |
+| Perfil               | 5      |           |
+| Estado Cuenta        | 5      | Si        |
+| Ficha Matricula      | 5      | Si        |
+| Registro Matricula   | 5      | Si        |
+| Horario              | 5      | Si        |
+| Asistencias          | 5      | Si        |
+| Detalle Asistencia   | 5      | No        |
+| Mensajería           | 5      | Si        |
+| Notificaciones       | 5      | Si        |
+| Reporte Notas        | 5      | Si        |
+
+---
+Total de puntos: 60
+Estado del proyecto: 90%
