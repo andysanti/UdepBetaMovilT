@@ -57,18 +57,33 @@ Proyecto móviles
 
 * ## Screenshots del proyecto final
 
+| Login | Main | Aula Virtual |
+| -------- | -------- | -------- |
+| ![](https://i.imgur.com/n2FNmtg.png) |  | ![](https://i.imgur.com/iMKz8uh.png) |
+
+
+| Estado de Cuenta | Notificaciones | Notificaciones c Filtro |
+| -------- | -------- | -------- |
+| ![](https://i.imgur.com/8dhTxVl.png) | ![](https://i.imgur.com/75XZjUj.png) | ![](https://i.imgur.com/lKkGOFg.png) |
+
+
+| Ficha Matricula | Registro Matricula | Mensajeria |
+| -------- | -------- | -------- |
+| ![](https://i.imgur.com/FNCtYud.png) | ![](https://i.imgur.com/U0G7s90.png) | ![](https://i.imgur.com/g1lXwBZ.png) |
+
 * ## Cuadro resumen de historias de usuario
 ---
 | Historia de Usuario  | Puntos | Terminada |
 | -------------------- | ------ | --------- |
 | Login                | 5      | Si        |
 | Cerrar Sesión        | 5      | No        |
+| Main                 | 5      | No        |
 | Aula Virtual         | 5      | Si        |
-| Perfil               | 5      |           |
+| Perfil               | 5      | No        |
 | Estado Cuenta        | 5      | Si        |
 | Ficha Matricula      | 5      | Si        |
 | Registro Matricula   | 5      | Si        |
-| Horario              | 5      | Si        |
+| Horario              | 5      | No        |
 | Asistencias          | 5      | Si        |
 | Detalle Asistencia   | 5      | No        |
 | Mensajería           | 5      | Si        |
@@ -77,4 +92,5 @@ Proyecto móviles
 
 ---
 Total de puntos: 60
+
 Estado del proyecto: 90%
