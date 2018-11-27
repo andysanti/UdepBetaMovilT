@@ -93,4 +93,4 @@ Proyecto móviles
 ---
 Total de puntos: 60
 
-Estado del proyecto: 90%
+Estado del proyecto: 80%
