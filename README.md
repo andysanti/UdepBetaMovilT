@@ -42,6 +42,8 @@ Proyecto móviles
 ![](https://i.imgur.com/gNGoDxM.png)
 
 * ## Diseño de su base de datos estructurada
+![](https://i.imgur.com/ymSgKoy.png)
+
 * ## Diseño de su base de datos en firebase, explicar el proceso y por que se desmoralizó de esa forma (Debe estar alineada a su interfaz, como el ejemplo de twitter)
 * ## Problemas encontrados en el desarrollo
 
