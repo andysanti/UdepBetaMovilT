@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:padding="5dp"
+    android:gravity="center"
+    android:padding="4dp"
     tools:context=".activities.ReporteNotasActivity">
 
     <ExpandableListView
@@ -15,4 +16,28 @@
         android:divider="#000000"
         android:dividerHeight="1dp" />
 
-</LinearLayout>
+    <RelativeLayout
+        android:id="@+id/reporte_emptyElement"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dp"
+            app:srcCompat="@drawable/bell" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/no_reporte" />
+    </RelativeLayout>
+
+</RelativeLayout>

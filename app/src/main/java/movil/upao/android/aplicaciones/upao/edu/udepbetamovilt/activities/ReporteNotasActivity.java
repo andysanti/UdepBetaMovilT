@@ -42,6 +42,7 @@ public class ReporteNotasActivity extends AppCompatActivity {
 
         // Setting group indicator null for custom indicator
         expandableListView.setGroupIndicator(null);
+        expandableListView.setEmptyView(findViewById(R.id.reporte_emptyElement));
 
         dao_Curso = new DAOSQLCurso(this);
 

@@ -47,13 +47,16 @@ public class AsistenciaActivity extends AppCompatActivity implements AdapterView
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_asistencia);
 
+        //configurar el botón Back (arriba)
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         prefs = new UdepSharedPreferences(this);
         database = FirebaseDatabase.getInstance();
 
         lstAsistencias = findViewById(R.id.lstAsistencias);
         lstAsistencias.setEmptyView(findViewById(R.id.emptyElement));
         lstAsistencias.setOnItemClickListener(this);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         asistenciasRef = database.getReference("asistencias");
         /*
@@ -206,6 +209,8 @@ public class AsistenciaActivity extends AppCompatActivity implements AdapterView
                 TextView semestre = v.findViewById(R.id.lblSemestre);
                 ImageView icon = v.findViewById(R.id.imgstar);
 
+                TextView porcentaje= v.findViewById(R.id.lblPorcentaje2);
+
                 // Set their text
                 asiste.setText("" + s.getAsistencias());
                 faltas.setText("" + s.getFaltas());
@@ -223,6 +228,7 @@ public class AsistenciaActivity extends AppCompatActivity implements AdapterView
                 if (s.getAsistencias() < 50) {
 
                     asiste2.setTextColor(Color.parseColor("#ff0000"));
+                    porcentaje.setTextColor(Color.parseColor("#ff0000"));
                 }
 
                 asistencias.add(s);
@@ -243,8 +249,21 @@ public class AsistenciaActivity extends AppCompatActivity implements AdapterView
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
         int ide= asistencias.get(position).getId();
+        int asisten=asistencias.get(position).getAsistencias();
+        int faltas= asistencias.get(position).getFaltas();
+        String semestre= asistencias.get(position).getSemestre();
+        String estado= asistencias.get(position).getEstado();
+        String curso= asistencias.get(position).getCurso();
+        String url= asistencias.get(position).getPhoto_url();
+
         Intent intent = new Intent(this, DetalleAsistenciaActivity.class);
         intent.putExtra("id",ide);
+        intent.putExtra("asistencias",asisten);
+        intent.putExtra("faltas",faltas);
+        intent.putExtra("semestre",semestre);
+        intent.putExtra("estado",estado);
+        intent.putExtra("curso",curso);
+        intent.putExtra("url",url);
         startActivity(intent);
 
     }

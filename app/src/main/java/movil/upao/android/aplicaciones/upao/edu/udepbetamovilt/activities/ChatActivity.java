@@ -190,8 +190,8 @@ public class ChatActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        this.finish();
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

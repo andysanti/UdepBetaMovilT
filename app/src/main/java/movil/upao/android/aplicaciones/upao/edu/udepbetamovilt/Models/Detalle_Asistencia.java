@@ -7,17 +7,19 @@ public class Detalle_Asistencia {
     private String curso;
     private String sesion;
     private String tipoAsistencia;
+    private String fecha;
 
     public Detalle_Asistencia() {
 
     }
 
-    public Detalle_Asistencia(int id, int idAsistencia, String curso, String sesion, String tipoAsistencia) {
+    public Detalle_Asistencia(int id, int idAsistencia, String curso, String sesion, String tipoAsistencia, String fecha) {
         this.id = id;
         this.idAsistencia = idAsistencia;
         this.curso = curso;
         this.sesion = sesion;
         this.tipoAsistencia = tipoAsistencia;
+        this.setFecha(fecha);
     }
 
     public String getTipoAsistencia() {
@@ -51,5 +53,13 @@ public class Detalle_Asistencia {
 
     public void setIdAsistencia(int idAsistencia) {
         this.idAsistencia = idAsistencia;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
 }
