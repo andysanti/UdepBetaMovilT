@@ -4,9 +4,9 @@ Proyecto móviles
 ## Integrantes:
 ---
 
-[![VictorRamDom](https://avatars2.githubusercontent.com/u/15022592?s=40&v=4) Victor Ramirez Dominguez](https://github.com/VictorRamDom) 
+# [![VictorRamDom](https://avatars2.githubusercontent.com/u/15022592?s=40&v=4) Victor Ramirez Dominguez](https://github.com/VictorRamDom) 
 ---
-[![JosueLy](https://i.imgur.com/fOdkI7y.jpg?1)Josué Joshua León Yalta](https://github.com/JosueLy)
+# [![JosueLy](https://i.imgur.com/fOdkI7y.jpg?1)Josué Joshua León Yalta](https://github.com/JosueLy)
 
 
 ## Informe:
