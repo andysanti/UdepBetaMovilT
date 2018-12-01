@@ -31,6 +31,7 @@ public class DAOSQLAlumno {
         ContentValues values = new ContentValues();
         values.put(AlumnoTable.COLUMN_DNI, alumno.getDNI());
         values.put(AlumnoTable.COLUMN_CARNE, alumno.getNro_carne());
+        values.put(AlumnoTable.COLUMN_PHOTO, alumno.getFoto());
         values.put(AlumnoTable.COLUMN_NOMBRE, alumno.getNombre());
         values.put(AlumnoTable.COLUMN_APELLIDOS, alumno.getApellidos());
         values.put(AlumnoTable.COLUMN_DIRECCION, alumno.getDireccion());
@@ -55,6 +56,7 @@ public class DAOSQLAlumno {
                         AlumnoTable.COLUMN_ID,
                         AlumnoTable.COLUMN_DNI,
                         AlumnoTable.COLUMN_CARNE,
+                        AlumnoTable.COLUMN_PHOTO,
                         AlumnoTable.COLUMN_NOMBRE,
                         AlumnoTable.COLUMN_APELLIDOS,
                         AlumnoTable.COLUMN_DIRECCION,
@@ -80,6 +82,7 @@ public class DAOSQLAlumno {
         alumno.setId(cursor.getInt(cursor.getColumnIndex(AlumnoTable.COLUMN_ID)));
         alumno.setDNI(cursor.getString(cursor.getColumnIndex(AlumnoTable.COLUMN_DNI)));
         alumno.setNro_carne(cursor.getString(cursor.getColumnIndex(AlumnoTable.COLUMN_CARNE)));
+        alumno.setFoto(cursor.getString(cursor.getColumnIndex(AlumnoTable.COLUMN_PHOTO)));
         alumno.setNombre(cursor.getString(cursor.getColumnIndex(AlumnoTable.COLUMN_NOMBRE)));
         alumno.setApellidos(cursor.getString(cursor.getColumnIndex(AlumnoTable.COLUMN_APELLIDOS)));
         alumno.setDireccion(cursor.getString(cursor.getColumnIndex(AlumnoTable.COLUMN_DIRECCION)));
@@ -105,6 +108,7 @@ public class DAOSQLAlumno {
                         AlumnoTable.COLUMN_ID,
                         AlumnoTable.COLUMN_DNI,
                         AlumnoTable.COLUMN_CARNE,
+                        AlumnoTable.COLUMN_PHOTO,
                         AlumnoTable.COLUMN_NOMBRE,
                         AlumnoTable.COLUMN_APELLIDOS,
                         AlumnoTable.COLUMN_DIRECCION,
@@ -113,6 +117,31 @@ public class DAOSQLAlumno {
                         AlumnoTable.COLUMN_GENERO
                 },
                 AlumnoTable.COLUMN_ID + " = ?", new String[]{String.valueOf(id)}, null, null, null);
+
+        while (cursor.moveToNext()) {
+            return cursorToAlumno(cursor);
+        }
+        cursor.close();
+        db.close();
+        return null;
+    }
+
+    public Alumno getByCarne(String carne) {
+        SQLiteDatabase db = this.dbHelper.getReadableDatabase();
+
+        Cursor cursor = db.query(AlumnoTable.TABLE_NAME, new String[]{
+                        AlumnoTable.COLUMN_ID,
+                        AlumnoTable.COLUMN_DNI,
+                        AlumnoTable.COLUMN_CARNE,
+                        AlumnoTable.COLUMN_PHOTO,
+                        AlumnoTable.COLUMN_NOMBRE,
+                        AlumnoTable.COLUMN_APELLIDOS,
+                        AlumnoTable.COLUMN_DIRECCION,
+                        AlumnoTable.COLUMN_TELEFONO,
+                        AlumnoTable.COLUMN_EMAIL,
+                        AlumnoTable.COLUMN_GENERO
+                },
+                AlumnoTable.COLUMN_CARNE + " = ?", new String[]{String.valueOf(carne)}, null, null, null);
 
         while (cursor.moveToNext()) {
             return cursorToAlumno(cursor);
@@ -132,6 +161,7 @@ public class DAOSQLAlumno {
                         AlumnoTable.COLUMN_ID,
                         AlumnoTable.COLUMN_DNI,
                         AlumnoTable.COLUMN_CARNE,
+                        AlumnoTable.COLUMN_PHOTO,
                         AlumnoTable.COLUMN_NOMBRE,
                         AlumnoTable.COLUMN_APELLIDOS,
                         AlumnoTable.COLUMN_DIRECCION,

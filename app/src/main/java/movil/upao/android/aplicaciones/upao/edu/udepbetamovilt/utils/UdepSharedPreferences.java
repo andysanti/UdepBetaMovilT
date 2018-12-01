@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 public class UdepSharedPreferences {
     public static final String SHARED_PREFERENCES_NAME = "UDEP_MOVIL";
     public static final String PREF_USUARIO = "USUARIO";
+    public static final String PREF_PATH_PHOTO = "PHOTO";
     public static final String PREF_ID = "PREF_ID";
     public static final String PREF_NOMBRES = "PREF_NOMBRES";
 

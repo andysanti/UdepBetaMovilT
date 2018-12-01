@@ -18,6 +18,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets { main { res.srcDirs = ['src/main/res', 'src/main/res/values-v21'] } }
 }
 
 dependencies {
@@ -37,4 +38,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:16.0.1'
     implementation 'com.google.firebase:firebase-messaging:17.3.3'
     implementation 'com.firebaseui:firebase-ui-database:4.2.0'
+    implementation 'com.github.bumptech.glide:glide:3.6.1'
 }

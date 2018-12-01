@@ -12,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".activities.LoginActivity"
             android:screenOrientation="portrait"></activity>
@@ -50,7 +51,8 @@
             android:name=".activities.RegistroMatriculaActivity"
             android:label="@string/registro_matricula"
             android:screenOrientation="portrait" />
-        <activity android:name=".activities.HorarioActivity" />
+        <activity android:name=".activities.HorarioActivity"
+            android:theme="@style/Theme.RicoPaRico"/>
         <activity
             android:name=".activities.ReporteNotasActivity"
             android:label="@string/reporte_notas"
@@ -91,6 +93,10 @@
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:value="@string/default_notification_channel_id" />
 
+        <activity android:name=".PrincipalActivity"
+            android:theme="@style/Theme.RicoPaRico">
+
+        </activity>
     </application>
 
 </manifest>

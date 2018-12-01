@@ -64,6 +64,7 @@ public class LoginActivity extends AppCompatActivity {
             prefs.putString(UdepSharedPreferences.PREF_USUARIO, alumno.getNro_carne());
             prefs.putInt(UdepSharedPreferences.PREF_ID, alumno.getId());
             prefs.putString(UdepSharedPreferences.PREF_NOMBRES, alumno.getNombres());
+            prefs.putString(UdepSharedPreferences.PREF_PATH_PHOTO, alumno.getFoto());
 
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);

@@ -34,5 +34,12 @@
     <string name="default_notification_channel_id">777</string>
 
     <string name="input_placeholder">Escriba un mensaje</string>
+    <string name="inicio">Inicio</string>
+    <string name="miperfil">Mi Perfil</string>
+    <string name="cerrarsesion">Cerrar Sesión</string>
+    <string name="bienvenido">Bienvenido</string>
+    <string name="title_section1">Lunes</string>
+    <string name="title_section2">Martes</string>
+    <string name="title_section3">Miercoles</string>
 
 </resources>

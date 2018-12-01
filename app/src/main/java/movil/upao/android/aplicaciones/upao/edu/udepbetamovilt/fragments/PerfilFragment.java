@@ -1,7 +1,10 @@
 package movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.fragments;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -10,9 +13,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
+
+import java.io.InputStream;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.R;
@@ -24,6 +30,9 @@ public class PerfilFragment extends Fragment {
 
     private TextView txtNombrePerfil;
     private TextView txtNombrePerfilToolBar;
+
+    private Bitmap bitmap;
+
     public PerfilFragment() {
         // Required empty public constructor
     }

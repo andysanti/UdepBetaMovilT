@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.db.tables.*;
 
 public class UdepDBHelper extends SQLiteOpenHelper {
-    public static final int DATABASE_VERSION = 1;
+    public static final int DATABASE_VERSION = 2;
     public static final String DATABASE_NAME = "udepbetamovil.db";
 
     private static final String SQL_CREATE_ALUMNO =
@@ -15,6 +15,7 @@ public class UdepDBHelper extends SQLiteOpenHelper {
                     AlumnoTable.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     AlumnoTable.COLUMN_DNI + " TEXT unique NOT NULL, " +
                     AlumnoTable.COLUMN_CARNE + " TEXT unique NOT NULL, " +
+                    AlumnoTable.COLUMN_PHOTO + " TEXT unique NOT NULL, " +
                     AlumnoTable.COLUMN_NOMBRE + " TEXT NOT NULL, " +
                     AlumnoTable.COLUMN_APELLIDOS + " TEXT NOT NULL, " +
                     AlumnoTable.COLUMN_DIRECCION + " TEXT, " +
