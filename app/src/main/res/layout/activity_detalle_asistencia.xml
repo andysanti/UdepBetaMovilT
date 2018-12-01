@@ -5,10 +5,203 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.DetalleAsistenciaActivity">
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/viewCurso"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+        <ImageView
+            android:id="@+id/imgteacher"
+            android:layout_width="42dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="25dp"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="@id/viewCurso"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/lblCurso"
+            android:layout_width="240dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="5dp"
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imgteacher"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblAsistencias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="25dp"
+            android:text="ASISTENCIAS"
+
+            app:layout_constraintStart_toEndOf="@+id/imgteacher"
+            app:layout_constraintTop_toTopOf="@+id/lblCurso"
+            />
+
+        <TextView
+            android:id="@+id/lblFaltas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:text="FALTAS"
+            app:layout_constraintStart_toEndOf="@+id/imgteacher"
+            app:layout_constraintTop_toTopOf="@+id/lblAsistencias"
+            />
+
+        <TextView
+            android:id="@+id/lblSemestre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:text="TextView"
+            android:textColor="@color/gray"
+            app:layout_constraintStart_toEndOf="@+id/imgteacher"
+            app:layout_constraintTop_toBottomOf="@+id/lblAsistencias" />
+
+        <TextView
+            android:id="@+id/lblNroAsistencias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="25dp"
+            android:text="TextView"
+            android:gravity="center"
+            android:textColor="@color/blue_primary"
+            app:layout_constraintStart_toEndOf="@+id/lblAsistencias"
+            app:layout_constraintTop_toTopOf="@+id/lblCurso"
+            />
+        <TextView
+            android:id="@+id/lblPorcentaje"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="25dp"
+            android:text="%"
+            android:textColor="@color/blue_primary"
+            app:layout_constraintStart_toEndOf="@id/lblNroAsistencias"
+            app:layout_constraintTop_toTopOf="@id/lblCurso" />
+        <TextView
+            android:id="@+id/lblNroFaltas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="43dp"
+            android:layout_marginTop="20dp"
+            android:text="TextView"
+            android:gravity="center"
+            android:textColor="@color/red_primary"
+            app:layout_constraintStart_toEndOf="@+id/lblFaltas"
+            app:layout_constraintTop_toTopOf="@+id/lblNroAsistencias"
+            />
+
+        <TextView
+            android:id="@+id/lblPorcentaje1"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="20dp"
+            android:text="%"
+            android:textColor="@color/red_primary"
+            app:layout_constraintStart_toEndOf="@id/lblNroFaltas"
+            app:layout_constraintTop_toTopOf="@id/lblPorcentaje" />
+        <TextView
+            android:id="@+id/lblEstado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="20dp"
+            android:text="TextView"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@+id/lblSemestre"
+            app:layout_constraintTop_toTopOf="@+id/lblNroFaltas"
+
+            />
+
+        <TextView
+            android:id="@+id/lblAsistencias2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:text="Asistencias"
+            android:textColor="@color/gray_light"
+            app:layout_constraintStart_toEndOf="@+id/lblEstado"
+            app:layout_constraintTop_toTopOf="@+id/lblNroAsistencias2"
+            />
+
+        <TextView
+            android:id="@+id/lblNroAsistencias2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="20dp"
+            android:text="TextView"
+            android:textColor="@color/orange_primary"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@+id/lblNroFaltas"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/lblAsistencias2"/>
+
+        <TextView
+            android:id="@+id/lblPorcentaje2"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="45dp"
+            android:text="%"
+            android:textColor="@color/orange_primary"
+            app:layout_constraintStart_toEndOf="@id/lblNroAsistencias2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/borde"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_deep"
+        android:showDividers="middle"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/viewCurso"
+        >
+        <TextView
+
+            android:id="@+id/txtSesion"
+            android:text="SESIÓN"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblind"
+            android:text="IND"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center"
+            />
+    </LinearLayout>
 
     <ListView
-        android:layout_width="fill_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/lstDetalleAsistencia" />
+        android:id="@+id/lstDetalleAsistencia"
+        android:layout_width="match_parent"
+        android:layout_height="487dp"
+        android:dividerHeight="2dp"
+        android:padding="5dp"
+        app:layout_constraintTop_toBottomOf="@id/borde"
+        />
+
+
 
 </android.support.constraint.ConstraintLayout>

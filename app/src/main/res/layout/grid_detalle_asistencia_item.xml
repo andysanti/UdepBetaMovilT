@@ -5,24 +5,59 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.DetalleAsistenciaActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:id="@+id/borde"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:showDividers="middle"
+            android:orientation="vertical"
 
-    <TextView
-        android:id="@+id/lblSesion"
-        android:layout_width="178dp"
-        android:layout_height="44dp"
-        android:text="TextView"
-        android:gravity="center"
-        app:layout_constraintRight_toLeftOf="@+id/lblTipoAsistencia"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+            >
 
-    <TextView
-        android:id="@+id/lblTipoAsistencia"
-        android:layout_width="204dp"
-        android:layout_height="45dp"
-        android:text="TextView"
-        android:gravity="center"
-        app:layout_constraintLeft_toRightOf="@+id/lblSesion"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/lblSesion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:text="TextView"
+                android:textColor="@color/gray_deep"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/lblFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/verticalline"
+                android:gravity="bottom"
+                android:text="TextView"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="10dp"
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/lblTipoAsistencia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:gravity="center"
+            android:divider="@drawable/marcotabla"
+            app:layout_constraintLeft_toRightOf="@+id/borde"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

@@ -27,6 +27,12 @@ Proyecto móviles
 | -------- | -------- | -------- |
 | ![](https://i.imgur.com/qEXlega.png) | ![](https://i.imgur.com/h2bIZOs.png) | ![](https://i.imgur.com/aq5DDFt.png) |
 
+| Asistencias | Detalle de Asistencias|               |
+|------------|-----------------------|---------------|
+| ![](https://imgur.com/ASjIGTH.png) | ![](https://i.imgur.com/OjsIA5N.png) |                 |
+
+
+
 
 * ## Historias de usuario
 

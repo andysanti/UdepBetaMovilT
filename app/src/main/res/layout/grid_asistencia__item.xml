@@ -40,6 +40,8 @@
         app:layout_constraintTop_toTopOf="@+id/lblCurso"
         />
 
+
+
     <TextView
         android:id="@+id/lblFaltas"
         android:layout_width="wrap_content"
@@ -76,10 +78,20 @@
         />
 
     <TextView
+        android:id="@+id/lblPorcentaje"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="25dp"
+        android:text="%"
+        android:textColor="@color/blue_primary"
+        app:layout_constraintStart_toEndOf="@id/lblNroAsistencias"
+        app:layout_constraintTop_toTopOf="@+id/lblCurso" />
+
+    <TextView
         android:id="@+id/lblNroFaltas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="43dp"
+        android:layout_marginStart="45dp"
         android:layout_marginTop="20dp"
         android:text="TextView"
         android:gravity="center"
@@ -87,12 +99,21 @@
         app:layout_constraintStart_toEndOf="@+id/lblFaltas"
         app:layout_constraintTop_toTopOf="@+id/lblNroAsistencias"
         />
+    <TextView
+        android:id="@+id/lblPorcentaje1"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/red_primary"
+        android:text="%"
+        app:layout_constraintStart_toEndOf="@id/lblNroFaltas"
+        app:layout_constraintTop_toTopOf="@+id/lblPorcentaje" />
 
     <TextView
         android:id="@+id/lblEstado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
+        android:layout_marginStart="37dp"
         android:layout_marginTop="20dp"
         android:text="TextView"
         android:gravity="center"
@@ -125,5 +146,15 @@
         app:layout_constraintStart_toEndOf="@+id/lblNroFaltas"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="@+id/lblAsistencias2"/>
+
+    <TextView
+        android:id="@+id/lblPorcentaje2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="45dp"
+        android:text="%"
+        android:textColor="@color/orange_primary"
+        app:layout_constraintStart_toEndOf="@id/lblNroAsistencias2"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
