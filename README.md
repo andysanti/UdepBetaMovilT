@@ -27,9 +27,9 @@ Proyecto móviles
 | -------- | -------- | -------- |
 | ![](https://i.imgur.com/qEXlega.png) | ![](https://i.imgur.com/h2bIZOs.png) | ![](https://i.imgur.com/aq5DDFt.png) |
 
-| Asistencias | Detalle de Asistencias|               |
-|------------|-----------------------|---------------|
-| ![](https://imgur.com/ASjIGTH.png) | ![](https://i.imgur.com/OjsIA5N.png) |                 |
+| Asistencias | Detalle de Asistencias|               
+|------------|-----------------------|
+| ![](https://imgur.com/ASjIGTH.png) | ![](https://i.imgur.com/OjsIA5N.png) |
 
 
 
@@ -46,6 +46,9 @@ Proyecto móviles
 ![](https://i.imgur.com/AVxaaFa.png)
 ![](https://i.imgur.com/CKAsvQl.png)
 ![](https://i.imgur.com/gNGoDxM.png)
+![](https://i.imgur.com/rUyJQzx.png)
+![](https://i.imgur.com/yx86He8.png)
+
 
 * ## Diseño de su base de datos estructurada
 ![](https://i.imgur.com/ymSgKoy.png)
@@ -60,6 +63,13 @@ Notificaciones
 
 Estado Cuenta
 ![](https://i.imgur.com/83GgzwI.png)
+
+Asistencias
+![](https://i.imgur.com/obbukDe.png?1)
+
+Detalle Asistencias
+![](https://i.imgur.com/JHEJlNE.png?1)
+
 
 * ## Problemas encontrados en el desarrollo
 
