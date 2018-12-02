@@ -103,13 +103,12 @@ Detalle Asistencias
 | Ficha Matricula      | 8      | Si        |
 | Registro Matricula   | 8      | Si        |
 | Horario              | 8      | No        |
-| Asistencias          | 8      | Si        |
-| Detalle Asistencia   | 5      | No        |
+| Asistencias          | 12     | Si        |
+| Detalle Asistencia   | 12     | Si        |
 | Mensajería           | 8      | Si        |
 | Notificaciones       | 10     | Si        |
 | Reporte Notas        | 8      | Si        |
-
 ---
-Total de puntos: 118
+Total de puntos: 137
 
-Estado del proyecto: 65%
+Estado del proyecto: 70%
