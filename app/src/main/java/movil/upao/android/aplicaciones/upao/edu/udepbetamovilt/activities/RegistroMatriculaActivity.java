@@ -126,6 +126,15 @@ public class RegistroMatriculaActivity extends AppCompatActivity {
     public void abre_dialogo() {
         final List<Curso> cursos = gridViewFragment.show_ones();
 
+
+        for (int i = 0; i < cursos.size(); i++)
+        {
+            if(cursos.get(i).getCiclo() != "08"){
+                fHelps.f_showMessage(this, "Ha seleccionado cursos que no corresponden a su ciclo actual.","Udep In");
+                return;
+            }
+        }
+
         if(cursos.size()==0){
             fHelps.f_showMessage(this, "No ha seleccionado ningún curso.","Udep In");
             return;
