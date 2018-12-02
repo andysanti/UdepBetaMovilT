@@ -83,6 +83,7 @@ Detalle Asistencias
 | 5   | Errores con el IDE Android Studio | Muy Alto |
 | 6   | Error en la dependencia del Firebase | Muy Alto |
 | 7   | Librerias de FireBase obsoletas | Alto |
+| 8   | Problemas con las vistas layouts | Muy Alto |
 
 [Mas info sobre errores](http://www.javiergarzas.com/2010/06/errores-clasicos-desarrollo-software.html)
 
