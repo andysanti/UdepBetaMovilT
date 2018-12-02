@@ -4,10 +4,13 @@ Proyecto móviles
 ## Integrantes:
 ---
 
-# [![VictorRamDom](https://avatars2.githubusercontent.com/u/15022592?s=40&v=4) Victor Ramirez Dominguez](https://github.com/VictorRamDom) 
----
-# [![JosueLy](https://i.imgur.com/fOdkI7y.jpg?1)Josué Joshua León Yalta](https://github.com/JosueLy)
+[![VictorRamDom](https://avatars2.githubusercontent.com/u/15022592?s=40&v=4) Victor Ramirez Dominguez]()
 
+[![JosueLy](https://i.imgur.com/fOdkI7y.jpg?1) Josué Joshua León Yalta](https://github.com/JosueLy)
+
+[![Andy Wilman](https://avatars.articulate.com/user/avatar/0fab1b90-b37f-0131-2ee8-22000b2f96a1/micro_1406932637.png) Andy Santi Almeida]()
+
+[![Oscar Ricardo](https://avatars.articulate.com/user/avatar/0fab1b90-b37f-0131-2ee8-22000b2f96a1/micro_1406932637.png) Oscar Navarro Mendoza]() 
 
 ## Informe:
 
@@ -30,28 +33,23 @@ Proyecto móviles
 | -------- | -------- | -------- |
 | ![](https://i.imgur.com/qEXlega.png) | ![](https://i.imgur.com/h2bIZOs.png) | ![](https://i.imgur.com/aq5DDFt.png) |
 
-| Asistencias | Detalle de Asistencias|               
+| Asistencias | Detalle de Asistencias|
 |------------|-----------------------|
-| ![](https://imgur.com/ASjIGTH.png) | ![](https://i.imgur.com/OjsIA5N.png) |
-
-
-
+| ![](https://i.imgur.com/ZpGQejJ.png) | ![](https://i.imgur.com/lQVx4jZ.png) |
 
 * ## Historias de usuario
 
 ![](https://i.imgur.com/SgYHax1.png)
 ![](https://i.imgur.com/Es5IU7q.png)
 ![](https://i.imgur.com/P5gymJx.png)
-![](https://i.imgur.com/EMa2TT7.png)
+![](https://i.imgur.com/rUyJQzx.png)
+![](https://i.imgur.com/yx86He8.png)
 ![](https://i.imgur.com/r0TR666.png)
 ![](https://i.imgur.com/g4Ml31e.png)
 ![](https://i.imgur.com/cvuBDSn.png)
 ![](https://i.imgur.com/AVxaaFa.png)
 ![](https://i.imgur.com/CKAsvQl.png)
 ![](https://i.imgur.com/gNGoDxM.png)
-![](https://i.imgur.com/rUyJQzx.png)
-![](https://i.imgur.com/yx86He8.png)
-
 
 * ## Diseño de su base de datos estructurada
 ![](https://i.imgur.com/ymSgKoy.png)
@@ -90,25 +88,43 @@ Detalle Asistencias
 
 * ## Screenshots del proyecto final
 
+| Login | Aula Virtual | Perfil |
+| -------- | -------- | -------- |
+| ![](https://i.imgur.com/n2FNmtg.png) | ![](https://i.imgur.com/7CA97Ek.png) | ![](https://i.imgur.com/DthPq8s.png) |
+
+
+| Estado de Cuenta | Notificaciones | Notificaciones c Filtro |
+| -------- | -------- | -------- |
+| ![](https://i.imgur.com/8dhTxVl.png) | ![](https://i.imgur.com/75XZjUj.png) | ![](https://i.imgur.com/lKkGOFg.png) |
+
+
+| Ficha Matricula | Registro Matricula | Mensajeria |
+| -------- | -------- | -------- |
+| ![](https://i.imgur.com/FNCtYud.png) | ![](https://i.imgur.com/U0G7s90.png) | ![](https://i.imgur.com/g1lXwBZ.png) |
+
+| Asistencias | Detalle de Asistencias| Cerrar sesión |
+|-------------|-----------------------|---------------|
+| ![](https://i.imgur.com/q9Aeemz.png) | ![](https://i.imgur.com/un70itd.png) | ![](https://i.imgur.com/T8pUA7b.png) |
+
 * ## Cuadro resumen de historias de usuario
 ---
 | Historia de Usuario  | Puntos | Terminada |
 | -------------------- | ------ | --------- |
 | Login                | 10     | Si        |
-| Cerrar Sesión        | 6      | No        |
-| Main                 | 5      | No        |
+| Cerrar Sesión        | 5      | Si        |
 | Aula Virtual         | 5      | Si        |
-| Perfil               | 5      | No        |
-| Estado Cuenta        | 32     | Si        |
-| Ficha Matricula      | 8      | Si        |
+| Perfil               | 5      | Si        |
+| Estado Cuenta        | 8      | Si        |
+| Ficha Matricula      | 6      | Si        |
 | Registro Matricula   | 8      | Si        |
 | Horario              | 8      | No        |
 | Asistencias          | 12     | Si        |
 | Detalle Asistencia   | 12     | Si        |
-| Mensajería           | 8      | Si        |
-| Notificaciones       | 10     | Si        |
+| Mensajería           | 12     | Si        |
+| Notificaciones       | 12     | Si        |
 | Reporte Notas        | 8      | Si        |
----
-Total de puntos: 137
 
-Estado del proyecto: 70%
+
+Total de puntos: 111
+
+Estado del proyecto: 92%
