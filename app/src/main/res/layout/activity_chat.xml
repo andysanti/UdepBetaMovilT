@@ -14,7 +14,7 @@ tools:context=".activities.ChatActivity">
     android:layout_weight="2"
     android:divider="#fff"
     android:layout_height="wrap_content"
-    android:transcriptMode="alwaysScroll"
+    android:transcriptMode="normal"
     android:stackFromBottom="true"
     />
 

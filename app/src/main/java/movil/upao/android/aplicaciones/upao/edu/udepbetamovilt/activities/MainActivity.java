@@ -36,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
         if(dao_Alumno.all().size()==0) {
             dao_Alumno.save(new Alumno(-1, "000155085","71716463","Victor", "Ramirez Dominguez", "Piura", "961244567", "victor@udep.edu.pe", "M", "https://sigadocentes.udep.edu.pe/fotossiga/persona/10173455_101d322.jpg"));
             dao_Alumno.save(new Alumno(-1, "000154674","45125744","Andy", "Santi Almeida", "Piura", "961353411", "andy@udep.edu.pe", "M", "https://sigadocentes.udep.edu.pe/fotossiga/persona/1016398_a866d43.jpg"));
-           // dao_Alumno.save(new Alumno(-1, "000155085","https://sigadocentes.udep.edu.pe/fotossiga/persona/10173455_101d322.jpg","71716463","Victor", "Ramirez Dominguez", "Piura", "961244567", "victor@udep.edu.pe", "M"));
+            dao_Alumno.save(new Alumno(-1, "000155260","03883798","Oscar Ricardo", "Navarro Mendoza", "Sullana", "959047742", "onavarrom1@upao.edu.pe", "M", "https://scontent.ftru3-1.fna.fbcdn.net/v/t1.0-9/45159244_1017730965101788_4371484848502603776_n.jpg?_nc_cat=102&_nc_eui2=AeEtZHXTP28cDLtbormBHlNGoxAl48p6gDJX2kVGf9kphL6eNp08CFg5xzuur_gd_03PeH9ZaPprS2xwiDn6EFxZuNG9LnvhH33k_nYEGvYrXA&_nc_ht=scontent.ftru3-1.fna&oh=8f35a9f95599694a776db52a1bc6032b&oe=5C72FFE6"));
+            // dao_Alumno.save(new Alumno(-1, "000155085","https://sigadocentes.udep.edu.pe/fotossiga/persona/10173455_101d322.jpg","71716463","Victor", "Ramirez Dominguez", "Piura", "961244567", "victor@udep.edu.pe", "M"));
            // dao_Alumno.save(new Alumno(-1, "000154674","https://sigadocentes.udep.edu.pe/fotossiga/persona/1016398_a866d43.jpg","45125744","Andy", "Santi Almeida", "Piura", "961353411", "andy@udep.edu.pe", "M"));
         }
 

@@ -275,7 +275,7 @@
         android:id="@+id/imagenperfil"
         android:layout_width="@dimen/dimen_circleimageprofile"
         android:layout_height="@dimen/dimen_circleimageprofile"
-
+        android:src="@drawable/ic_user"
         android:layout_gravity="center|top"
         android:layout_marginTop="@dimen/margintop_circleimageprofile"
         android:elevation="@dimen/elevation_circleimageprofile"

@@ -3,7 +3,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorPrimary"
+    android:background="@color/fondoDrawer"
     android:gravity="bottom"
     android:orientation="vertical"
     android:padding="@dimen/padding_izquierdo_cabecera"
@@ -13,8 +13,8 @@
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/logoudepfinal" />
+        android:layout_height="match_parent"
+        android:src="@drawable/logoudepazul" />
 
     <TableLayout
         android:layout_width="match_parent"
