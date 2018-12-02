@@ -4,13 +4,13 @@ Proyecto móviles
 ## Integrantes:
 ---
 
-[![VictorRamDom](https://avatars2.githubusercontent.com/u/15022592?s=40&v=4) Victor Ramirez Dominguez]()
-
 [![JosueLy](https://i.imgur.com/fOdkI7y.jpg?1) Josué Joshua León Yalta](https://github.com/JosueLy)
 
 [![Andy Wilman](https://avatars.articulate.com/user/avatar/0fab1b90-b37f-0131-2ee8-22000b2f96a1/micro_1406932637.png) Andy Santi Almeida]()
 
 [![Oscar Ricardo](https://avatars.articulate.com/user/avatar/0fab1b90-b37f-0131-2ee8-22000b2f96a1/micro_1406932637.png) Oscar Navarro Mendoza]() 
+
+[![VictorRamDom](https://avatars2.githubusercontent.com/u/15022592?s=40&v=4) Victor Ramirez Dominguez]()
 
 ## Informe:
 
