@@ -13,6 +13,10 @@ public class Matricula {
     private String semestre;
     private int nota;
 
+    public void f_ModificarNota(int nota){
+        this.nota = nota;
+    }
+
     public Matricula() {
     }
 

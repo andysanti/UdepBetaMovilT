@@ -16,6 +16,15 @@ public class Notificacion {
         this.tipo = "avisos";
     }
 
+    public Notificacion(int id, String titulo, String descripcion, String fecha, String foto_url) {
+        this.id = id;
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.fecha = fecha;
+        this.foto_url = foto_url;
+        this.tipo = "avisos";
+    }
+
     public Notificacion(int id, String titulo, String descripcion, String fecha, String foto_url, String tipo) {
         this.id = id;
         this.titulo = titulo;

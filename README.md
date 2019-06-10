@@ -6,9 +6,9 @@ Proyecto móviles
 
 [![JosueLy](https://i.imgur.com/fOdkI7y.jpg?1) Josué Joshua León Yalta](https://github.com/JosueLy)
 
-[![Andy Wilman](https://avatars.articulate.com/user/avatar/0fab1b90-b37f-0131-2ee8-22000b2f96a1/micro_1406932637.png) Andy Santi Almeida]()
+[![Andy Wilman](https://sigadocentes.udep.edu.pe/fotossiga/persona/1016398_a866d43.jpg) Andy Santi Almeida]()
 
-[![Oscar Ricardo](https://avatars.articulate.com/user/avatar/0fab1b90-b37f-0131-2ee8-22000b2f96a1/micro_1406932637.png) Oscar Navarro Mendoza]() 
+[![Oscar Ricardo](https://scontent.ftru3-1.fna.fbcdn.net/v/t1.0-9/45159244_1017730965101788_4371484848502603776_n.jpg?_nc_cat=102&_nc_eui2=AeEtZHXTP28cDLtbormBHlNGoxAl48p6gDJX2kVGf9kphL6eNp08CFg5xzuur_gd_03PeH9ZaPprS2xwiDn6EFxZuNG9LnvhH33k_nYEGvYrXA&_nc_ht=scontent.ftru3-1.fna&oh=8f35a9f95599694a776db52a1bc6032b&oe=5C72FFE6) Oscar Navarro Mendoza]() 
 
 [![VictorRamDom](https://avatars2.githubusercontent.com/u/15022592?s=40&v=4) Victor Ramirez Dominguez]()
 

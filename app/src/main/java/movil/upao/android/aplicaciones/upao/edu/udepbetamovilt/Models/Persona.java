@@ -1,5 +1,8 @@
 package movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.Models;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Persona {
     private int id;
     private String DNI;
@@ -11,6 +14,15 @@ public class Persona {
     private String genero;
 
     public Persona() {
+    }
+
+    public boolean isNumeric(String cadena){
+        try {
+            Integer.parseInt(cadena);
+            return true;
+        } catch (NumberFormatException nfe){
+            return false;
+        }
     }
 
     public Persona(int id, String DNI, String nombre, String apellidos) {
@@ -44,7 +56,15 @@ public class Persona {
     }
 
     public void setDNI(String DNI) {
-        this.DNI = DNI;
+        //this.DNI = DNI;
+        if(DNI.length() == 8){
+            if(isNumeric(DNI)==true)
+                this.DNI = DNI;
+            else
+                this.DNI = "N/A";
+        }
+        else
+            this.DNI = "N/A";
     }
 
     public String getNombre() {
@@ -84,7 +104,21 @@ public class Persona {
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        // El email a validar
+        // String email = "info@programacionextrema.com";
+
+        // Patrón para validar el email
+        Pattern pattern = Pattern
+                .compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+                        + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
+
+        Matcher mather = pattern.matcher(email);
+
+        if (mather.find() == true) {
+            this.email = email;
+        } else {
+            this.email = "N/A";
+        }
     }
 
     public String getGenero() {

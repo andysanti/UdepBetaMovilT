@@ -13,6 +13,14 @@ public class Detalle_Asistencia {
 
     }
 
+    public Detalle_Asistencia(int id, int idAsistencia, String curso, String sesion, String tipoAsistencia) {
+        this.id = id;
+        this.idAsistencia = idAsistencia;
+        this.curso = curso;
+        this.sesion = sesion;
+        this.tipoAsistencia = tipoAsistencia;
+    }
+
     public Detalle_Asistencia(int id, int idAsistencia, String curso, String sesion, String tipoAsistencia, String fecha) {
         this.id = id;
         this.idAsistencia = idAsistencia;
