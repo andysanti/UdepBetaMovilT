@@ -5,6 +5,7 @@ import org.junit.Test;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.Models.Curso;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.Models.Persona;
 
+import static junit.framework.Assert.assertEquals;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 
