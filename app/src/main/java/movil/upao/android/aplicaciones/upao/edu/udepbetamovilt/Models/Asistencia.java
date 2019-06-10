@@ -7,8 +7,8 @@ public class Asistencia {
     private int id;
     private int asistencias;
     private int faltas;
-    private  String estado;
-    private  String semestre ; //201979
+    private String estado;
+    private String semestre ; //201979
     private String photo_url;
     private String curso;
     private List<Detalle_Asistencia> detAsistencias;
@@ -25,6 +25,16 @@ public class Asistencia {
         this.photo_url = photo_url;
         this.curso=curso;
         this.detAsistencias=detAsistencias;
+    }
+
+    public int SumarAsistencias(int asistencias){
+        this.asistencias += asistencias;
+        return this.asistencias;
+    }
+
+    public int SumarFaltas(int faltas){
+        this.faltas += faltas;
+        return this.faltas;
     }
 
     public int getAsistencias() {
