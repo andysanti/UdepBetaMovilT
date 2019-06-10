@@ -42,5 +42,6 @@
     <string name="title_section1">Lunes</string>
     <string name="title_section2">Martes</string>
     <string name="title_section3">Miercoles</string>
+    <string name="toolbar_tittle_createaccount">Horario</string>
 
 </resources>
