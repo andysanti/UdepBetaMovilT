@@ -29,12 +29,13 @@
         android:layout_marginTop="16dp"
         android:background="#6ef4f4f4"
         android:drawableLeft="@drawable/ic_person_white_24dp"
-        android:textColor="@color/white"
         android:drawablePadding="78dp"
         android:ems="1"
         android:hint="@string/usuario"
         android:inputType="number"
         android:padding="16dp"
+        android:text="000000000"
+        android:textColor="@color/white"
         android:textColorHint="#fff" />
 
     <EditText
@@ -44,12 +45,13 @@
         android:layout_marginTop="16dp"
         android:background="#6ef4f4f4"
         android:drawableLeft="@drawable/ic_lock_white_24dp"
-        android:textColor="@color/white"
         android:drawablePadding="78dp"
         android:ems="1"
         android:hint="@string/password"
         android:inputType="textPassword"
         android:padding="16dp"
+        android:text="000000000"
+        android:textColor="@color/white"
         android:textColorHint="#fff" />
 
     <Button

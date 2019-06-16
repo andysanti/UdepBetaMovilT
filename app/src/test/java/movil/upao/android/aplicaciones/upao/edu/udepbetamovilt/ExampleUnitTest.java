@@ -45,7 +45,7 @@ public class ExampleUnitTest {
         //Error
         p.setEmail("alumnoupaocom");
 
-        assertEquals("N/A", p.getDNI());
+        assertEquals("N/A", p.getEmail());
     }
 
     @Test

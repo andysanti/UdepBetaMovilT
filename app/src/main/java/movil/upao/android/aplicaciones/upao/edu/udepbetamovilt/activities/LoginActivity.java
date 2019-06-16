@@ -77,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void abre_dialogo_error(View v) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AlertDialogCustom);
         builder.setTitle("Atención");
         builder.setMessage("Usuario y/o contraseña son incorrectos. Vuelva a intentarlo.");
         builder.setPositiveButton(android.R.string.ok, null);
