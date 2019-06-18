@@ -6,26 +6,30 @@ package movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.Models;
 
 public class Alumno extends Persona {
     private String nro_carne;
+    private String clave;
     private String foto;
 
     public Alumno() {
         super();
     }
 
-    public Alumno(int id, String nro_carne, String DNI, String nombre, String apellidos) {
+    public Alumno(int id, String nro_carne, String clave, String DNI, String nombre, String apellidos) {
         super(id, DNI, nombre, apellidos);
         this.nro_carne = nro_carne;
+        this.clave = clave;
         this.foto = foto;
     }
 
-    public Alumno(int id, String nro_carne, String DNI, String nombre, String apellidos, String direccion, String telefono, String email, String genero) {
+    public Alumno(int id, String nro_carne, String clave, String DNI, String nombre, String apellidos, String direccion, String telefono, String email, String genero) {
         super(id, DNI, nombre, apellidos, direccion, telefono, email, genero);
         this.nro_carne = nro_carne;
+        this.clave = clave;
     }
 
-    public Alumno(int id, String nro_carne, String DNI, String nombre, String apellidos, String direccion, String telefono, String email, String genero, String foto) {
+    public Alumno(int id, String nro_carne, String clave, String DNI, String nombre, String apellidos, String direccion, String telefono, String email, String genero, String foto) {
         super(id, DNI, nombre, apellidos, direccion, telefono, email, genero);
         this.nro_carne = nro_carne;
+        this.clave = clave;
         this.foto = foto;
     }
 
@@ -35,6 +39,14 @@ public class Alumno extends Persona {
 
     public void setNro_carne(String nro_carne) {
         this.nro_carne = nro_carne;
+    }
+
+    public String getClave() {
+        return clave;
+    }
+
+    public void setClave(String clave) {
+        this.clave = clave;
     }
 
     public String getFoto() {

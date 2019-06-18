@@ -30,10 +30,11 @@ import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.utils.UdepSharedP
 public class InicioFragment extends Fragment {
 
     private TextView txtNombrePerfil;
+    private TextView txtNombreUsuario;
     private UdepSharedPreferences prefs;
     private DAOSQLAlumno dao_Alumno;
 
-    private Bitmap bitmap;
+    private static Bitmap bitmap;
 
     public InicioFragment() {
         // Required empty public constructor
@@ -57,7 +58,9 @@ public class InicioFragment extends Fragment {
         String imageUrl = prefs.getString(UdepSharedPreferences.PREF_PATH_PHOTO, null);
         String nombre="Andy Santi";
         txtNombrePerfil = (TextView)view.findViewById(R.id.textView3);
+        txtNombreUsuario = (TextView)view.findViewById(R.id.txtNombreUsuario);
         txtNombrePerfil.setText(usuario);
+        txtNombreUsuario.setText(usuario);
 /*
         txtNombrePerfil.setText(nombre);
         txtNombrePerfilToolBar.setText(nombre);*/
@@ -72,7 +75,7 @@ public class InicioFragment extends Fragment {
         return view;
     }
     //Class for download IMAGE
-    public class GetImageFromURL extends AsyncTask<String, Void, Bitmap> {
+    public static class GetImageFromURL extends AsyncTask<String, Void, Bitmap> {
         ImageView imgV;
 
         public GetImageFromURL(ImageView imgV){

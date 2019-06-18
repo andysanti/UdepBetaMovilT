@@ -8,8 +8,11 @@
             android:icon="@drawable/cuenta"
             android:title="@string/miperfil" />
         <item
+            android:id="@+id/item_editarcuenta"
+            android:icon="@drawable/editarcuenta"
+            android:title="@string/editarperfil" />
+        <item
             android:id="@+id/item_inicio"
-            android:checked="true"
             android:icon="@drawable/inicio"
             android:title="@string/inicio" />
         <item

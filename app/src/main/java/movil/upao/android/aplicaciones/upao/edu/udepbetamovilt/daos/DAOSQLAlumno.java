@@ -31,6 +31,7 @@ public class DAOSQLAlumno {
         ContentValues values = new ContentValues();
         values.put(AlumnoTable.COLUMN_DNI, alumno.getDNI());
         values.put(AlumnoTable.COLUMN_CARNE, alumno.getNro_carne());
+        values.put(AlumnoTable.COLUMN_CLAVE, alumno.getClave());
         values.put(AlumnoTable.COLUMN_PHOTO, alumno.getFoto());
         values.put(AlumnoTable.COLUMN_NOMBRE, alumno.getNombre());
         values.put(AlumnoTable.COLUMN_APELLIDOS, alumno.getApellidos());
@@ -56,6 +57,7 @@ public class DAOSQLAlumno {
                         AlumnoTable.COLUMN_ID,
                         AlumnoTable.COLUMN_DNI,
                         AlumnoTable.COLUMN_CARNE,
+                        AlumnoTable.COLUMN_CLAVE,
                         AlumnoTable.COLUMN_PHOTO,
                         AlumnoTable.COLUMN_NOMBRE,
                         AlumnoTable.COLUMN_APELLIDOS,
@@ -82,6 +84,7 @@ public class DAOSQLAlumno {
         alumno.setId(cursor.getInt(cursor.getColumnIndex(AlumnoTable.COLUMN_ID)));
         alumno.setDNI(cursor.getString(cursor.getColumnIndex(AlumnoTable.COLUMN_DNI)));
         alumno.setNro_carne(cursor.getString(cursor.getColumnIndex(AlumnoTable.COLUMN_CARNE)));
+        alumno.setClave(cursor.getString(cursor.getColumnIndex(AlumnoTable.COLUMN_CLAVE)));
         alumno.setFoto(cursor.getString(cursor.getColumnIndex(AlumnoTable.COLUMN_PHOTO)));
         alumno.setNombre(cursor.getString(cursor.getColumnIndex(AlumnoTable.COLUMN_NOMBRE)));
         alumno.setApellidos(cursor.getString(cursor.getColumnIndex(AlumnoTable.COLUMN_APELLIDOS)));
@@ -108,6 +111,7 @@ public class DAOSQLAlumno {
                         AlumnoTable.COLUMN_ID,
                         AlumnoTable.COLUMN_DNI,
                         AlumnoTable.COLUMN_CARNE,
+                        AlumnoTable.COLUMN_CLAVE,
                         AlumnoTable.COLUMN_PHOTO,
                         AlumnoTable.COLUMN_NOMBRE,
                         AlumnoTable.COLUMN_APELLIDOS,
@@ -133,6 +137,7 @@ public class DAOSQLAlumno {
                         AlumnoTable.COLUMN_ID,
                         AlumnoTable.COLUMN_DNI,
                         AlumnoTable.COLUMN_CARNE,
+                        AlumnoTable.COLUMN_CLAVE,
                         AlumnoTable.COLUMN_PHOTO,
                         AlumnoTable.COLUMN_NOMBRE,
                         AlumnoTable.COLUMN_APELLIDOS,
@@ -154,13 +159,14 @@ public class DAOSQLAlumno {
     public Alumno getLogin(String usuario, String password) {
         SQLiteDatabase db = this.dbHelper.getReadableDatabase();
 
-        String whereClause = AlumnoTable.COLUMN_CARNE + "=? AND " + AlumnoTable.COLUMN_CARNE +"=?";
+        String whereClause = AlumnoTable.COLUMN_CARNE + "=? AND " + AlumnoTable.COLUMN_CLAVE +"=?";
         String[] whereArgs = new String[]{usuario, password};
 
         Cursor cursor = db.query(AlumnoTable.TABLE_NAME, new String[]{
                         AlumnoTable.COLUMN_ID,
                         AlumnoTable.COLUMN_DNI,
                         AlumnoTable.COLUMN_CARNE,
+                        AlumnoTable.COLUMN_CLAVE,
                         AlumnoTable.COLUMN_PHOTO,
                         AlumnoTable.COLUMN_NOMBRE,
                         AlumnoTable.COLUMN_APELLIDOS,

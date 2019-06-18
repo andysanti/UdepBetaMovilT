@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities.LoginActivity;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities.MainActivity;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.activities.ReporteNotasActivity;
+import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.fragments.EditPerfilFragment;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.fragments.InicioFragment;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.fragments.PerfilFragment;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.utils.UdepSharedPreferences;
@@ -64,17 +65,18 @@ public class PrincipalActivity extends AppCompatActivity {
             case R.id.item_inicio:
                 startActivity(new Intent(this, MainActivity.class));
                 break;
-
             case R.id.item_cuenta:
                 // Fragmento para la sección Cuenta
                 fragmentoGenerico = new InicioFragment();
                 break;
+            case R.id.item_editarcuenta:
+                // Fragmento para la sección Editar Cuenta
+                fragmentoGenerico = new EditPerfilFragment();
+                break;
             case R.id.item_categorias:
                 //  sección cerrar sesión
                 cerrarSesion();
-
                 break;
-
         }
         if (fragmentoGenerico != null) {
             fragmentManager

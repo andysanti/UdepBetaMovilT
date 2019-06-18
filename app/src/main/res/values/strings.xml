@@ -37,11 +37,22 @@
     <string name="input_placeholder">Escriba un mensaje</string>
     <string name="inicio">Inicio</string>
     <string name="miperfil">Mi Perfil</string>
+    <string name="editarperfil">Editar Perfil</string>
     <string name="cerrarsesion">Cerrar Sesión</string>
     <string name="bienvenido">Bienvenido</string>
     <string name="title_section1">Lunes</string>
     <string name="title_section2">Martes</string>
     <string name="title_section3">Miercoles</string>
     <string name="toolbar_tittle_createaccount">Horario</string>
+
+    <!-- Perfil. -->
+    <string name="dni">DNI</string>
+    <string name="nro_carne">Carne</string>
+    <string name="clave">Contraseña</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="direccion">Dirección</string>
+    <string name="telefono">Telefono</string>
+    <string name="email">Email</string>
 
 </resources>

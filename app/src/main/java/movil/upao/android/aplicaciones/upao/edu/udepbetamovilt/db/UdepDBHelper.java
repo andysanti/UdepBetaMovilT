@@ -15,6 +15,7 @@ public class UdepDBHelper extends SQLiteOpenHelper {
                     AlumnoTable.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     AlumnoTable.COLUMN_DNI + " TEXT unique NOT NULL, " +
                     AlumnoTable.COLUMN_CARNE + " TEXT unique NOT NULL, " +
+                    AlumnoTable.COLUMN_CLAVE + " TEXT NOT NULL, " +
                     AlumnoTable.COLUMN_PHOTO + " TEXT unique NOT NULL, " +
                     AlumnoTable.COLUMN_NOMBRE + " TEXT NOT NULL, " +
                     AlumnoTable.COLUMN_APELLIDOS + " TEXT NOT NULL, " +

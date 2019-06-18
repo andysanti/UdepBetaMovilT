@@ -13,12 +13,14 @@
         android:background="@color/colorPrimary"
         android:paddingBottom="20dp">
 
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/imgUser"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp">
+            android:layout_gravity="center|top"
+            android:gravity="center">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/imagenperfil"
@@ -35,12 +37,17 @@
                 app:targetX="16dp"
                 app:targetY="@dimen/margintoptoolbar_circleimageprofile"
                 app:targetWidth="@dimen/width_circleimagetoolbar"
-                app:targetHeight="@dimen/width_circleimagetoolbar"
+                app:targetHeight="@dimen/width_circleimagetoolbar" />
 
-                />
+            <TextView
+                android:id="@+id/txtNombreUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Andy Santi"
+                android:textColor="@android:color/white"
+                android:textSize="30dp" />
 
-
-        </RelativeLayout>
+        </LinearLayout>
 
 
     </RelativeLayout>
