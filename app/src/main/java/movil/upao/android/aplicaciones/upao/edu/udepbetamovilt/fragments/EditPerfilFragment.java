@@ -1,10 +1,5 @@
 package movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.fragments;
 
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.internal.NavigationMenu;
 import android.support.v4.app.Fragment;
@@ -17,13 +12,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.InputStream;
-
 import io.github.yavski.fabspeeddial.FabSpeedDial;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.Models.Alumno;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.R;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.daos.DAOSQLAlumno;
 import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.utils.UdepSharedPreferences;
+import movil.upao.android.aplicaciones.upao.edu.udepbetamovilt.validations.ValEditarPerfil;
 
 public class EditPerfilFragment extends Fragment {
     private EditText etxt_email;
@@ -36,8 +30,6 @@ public class EditPerfilFragment extends Fragment {
     private UdepSharedPreferences prefs;
     private DAOSQLAlumno dao_Alumno;
 
-    //private int id_alumno;
-    //private String carne_alumno;
     private Alumno alumno;
 
     public EditPerfilFragment() {
@@ -47,11 +39,11 @@ public class EditPerfilFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        prefs = new UdepSharedPreferences(getActivity()); // creo mis preferencias
+        prefs = new UdepSharedPreferences(getActivity());
         dao_Alumno = new DAOSQLAlumno(getActivity());
 
-        int id_alumno =  prefs.getInt(UdepSharedPreferences.PREF_ID, -1);
-        String carne_alumno =  prefs.getString(UdepSharedPreferences.PREF_USUARIO, "");
+        int id_alumno = prefs.getInt(UdepSharedPreferences.PREF_ID, -1);
+        String carne_alumno = prefs.getString(UdepSharedPreferences.PREF_USUARIO, "");
 
         alumno = dao_Alumno.getByCarne(carne_alumno);
     }
@@ -71,7 +63,6 @@ public class EditPerfilFragment extends Fragment {
 
         txt_nroCarne.setText(alumno.getNro_carne());
         new InicioFragment.GetImageFromURL(img_foto).execute(alumno.getFoto());
-        //img_foto.
 
         setDatosEnInputs();
 
@@ -79,7 +70,7 @@ public class EditPerfilFragment extends Fragment {
         fabSpeedDial.setMenuListener(new FabSpeedDial.MenuListener() {
             @Override
             public boolean onPrepareMenu(NavigationMenu navigationMenu) {
-                return true; // false: no muestra el menu
+                return true; //false: no muestra el menu
             }
 
             @Override
@@ -87,11 +78,17 @@ public class EditPerfilFragment extends Fragment {
 
                 String mensaje = "";
 
-                switch (menuItem.getItemId()) {
+                switch (menuItem.getItemId()){
                     case R.id.perfil_save:
-                        mensaje = "Los datos se han guardado exitosamente.";
+                        mensaje="Los datos se han guardado exitosamente.";
+                        String oEmail = etxt_email.getText().toString();
 
-                        alumno.setEmail(etxt_email.getText().toString());
+                        if(ValEditarPerfil.validarEmail(oEmail) == true)
+                            alumno.setEmail(oEmail);
+                        else{
+                            Toast.makeText(getActivity().getApplicationContext(), "Email incorrecto", Toast.LENGTH_LONG).show();
+                            return true;
+                        }
                         alumno.setClave(etxt_clave.getText().toString());
                         alumno.setDireccion(etxt_direccion.getText().toString());
                         alumno.setTelefono(etxt_telefono.getText().toString());
@@ -99,13 +96,13 @@ public class EditPerfilFragment extends Fragment {
                         dao_Alumno.save(alumno);
                         break;
                     case R.id.perfil_cancel:
-                        mensaje = "Se ha cancelado la operación.";
+                        mensaje="Se ah cancelado la operación.";
+                        setDatosEnInputs();
                         break;
                 }
 
                 Toast.makeText(getActivity().getApplicationContext(), mensaje, Toast.LENGTH_SHORT).show();
 
-                setDatosEnInputs();
                 return true;
             }
 
@@ -118,7 +115,7 @@ public class EditPerfilFragment extends Fragment {
         return view;
     }
 
-    private void setDatosEnInputs() {
+    private void setDatosEnInputs(){
         etxt_email.setText(alumno.getEmail());
         etxt_clave.setText(alumno.getClave());
         etxt_direccion.setText(alumno.getDireccion());
